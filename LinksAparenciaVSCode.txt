@@ -16,3 +16,7 @@ VSCode Great Icons
 
 Fontes:
 Fira Code
+
+Formatação:
+https://www.minifier.org/
+Beautify
