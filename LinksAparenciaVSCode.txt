@@ -1,0 +1,18 @@
+Site VS Code Themes:
+http://orta.io/vscode-themes/
+
+Site Orta.io VS Code Themes
+https://vscodethemes.com/trending
+
+Temas:
+Material Theme
+Monokai Pro
+Atom One Dark
+
+Ícones:
+vscode-icons
+Material Theme Icons
+VSCode Great Icons
+
+Fontes:
+Fira Code
