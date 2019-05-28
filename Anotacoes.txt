@@ -20,3 +20,11 @@ Fira Code
 Formatação:
 https://www.minifier.org/
 Beautify
+
+Intellisense:
+Path Intellisense
+
+Execução:
+Code Runner
+Live Server
+Debbuger for Chrome
