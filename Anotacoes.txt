@@ -1,10 +1,12 @@
+EXTENSÕES DISPONÍVEIS (recomendadas):
+
+Temas:
 Site VS Code Themes:
 http://orta.io/vscode-themes/
 
 Site Orta.io VS Code Themes
 https://vscodethemes.com/trending
 
-Temas:
 Material Theme
 Monokai Pro
 Atom One Dark
@@ -23,8 +25,16 @@ Beautify
 
 Intellisense:
 Path Intellisense
+Intellicode (com IA)
+
+FTP:
+SFTP
 
 Execução:
 Code Runner
 Live Server
 Debbuger for Chrome
+
+Regex:
+https://www.rexegg.com/regex-quickstart.html
+https://regex101.com/
