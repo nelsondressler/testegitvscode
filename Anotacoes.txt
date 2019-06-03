@@ -36,5 +36,16 @@ Live Server
 Debbuger for Chrome
 
 Regex:
+Regex Previewer
 https://www.rexegg.com/regex-quickstart.html
 https://regex101.com/
+
+Azure:
+Azure Tools
+
+Git:
+GitLens (turbinação do Git)
+
+Kanban:
+Kanban
+Todo Tree

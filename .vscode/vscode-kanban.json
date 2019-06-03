@@ -1,0 +1,21 @@
+{
+  "done": [],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "Nelson Dressler"
+      },
+      "category": "TesteDoCurso",
+      "creation_time": "2019-06-03T17:06:02.786Z",
+      "description": {
+        "content": "I sou apenas um teste do curso da ByLearn.",
+        "mime": "text/markdown"
+      },
+      "id": "1",
+      "references": [],
+      "title": "Teste"
+    }
+  ],
+  "testing": [],
+  "todo": []
+}
