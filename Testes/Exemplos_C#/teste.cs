@@ -45,4 +45,16 @@ public class Teste
         codigos.Add(4);
         codigos.Add(5);
     }
+    
+    public void TestandoTodo(int num)
+    {
+        //TODO: verificar se o número é primo
+        //TODO: mostrar uma mensagem para o usuário com o resultado
+        /*
+            Comentários personalizados (Better Comments): 
+            ? Ajuda: usado nos casos xyz
+            ! Aviso: não indicado nos casos abc
+            *@param teste (parâmetros)
+        */
+    }
 }

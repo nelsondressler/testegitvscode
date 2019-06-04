@@ -20,12 +20,17 @@ Fontes:
 Fira Code
 
 Formatação:
-https://www.minifier.org/
 Beautify
+Minify
+indent-rainbow
+Bracket Pair Colorizer
+Better Comments
+TinyPNG
 
 Intellisense:
 Path Intellisense
 Intellicode (com IA)
+Auto Close Tag
 
 FTP:
 SFTP
@@ -45,7 +50,10 @@ Azure Tools
 
 Git:
 GitLens (turbinação do Git)
+gi (gitignore)
+Partial Diff
 
 Kanban:
 Kanban
 Todo Tree
+
