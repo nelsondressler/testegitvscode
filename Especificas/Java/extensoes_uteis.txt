@@ -1,0 +1,5 @@
+Extensões Úteis:
+Language Support for Java(TM) by Red Hat
+Debugger for Java
+Java Extension Pack
+Spring Boot Extension Pack

@@ -1,0 +1,9 @@
+Extensões Úteis:
+C/C++
+http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite (compilador C/C++)
+http://releases.llvm.org/download.html#8.0.0 (formatação)
+C++ Intellisense
+C/C++ Snippets
+C/C++ Compile Run
+C/C++ Project Generator
+(C/C++ Extension Pack)

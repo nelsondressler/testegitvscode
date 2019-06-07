@@ -1,0 +1,5 @@
+Extensões Úteis:
+Python
+Python-autopep8
+Python Preview
+Python Extension Pack

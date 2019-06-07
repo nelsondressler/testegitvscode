@@ -1,0 +1,9 @@
+Extensões Úteis:
+C#
+C# Extensions
+C# Snippets
+C# FixFormat
+C# XML Documentation Comments
+Auto-Using for C#
+(C# IL Viewer)
+Awesome DotNetCore Pack

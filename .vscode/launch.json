@@ -5,19 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "C/C++: Debug (Launch)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Especificas/C_C++/main.c",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true
+        }, {
+            "type": "java",
+            "name": "Java: Debug (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld"
+        }, {
+            "type": "java",
+            "name": "Java: Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": ""
+        }, {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:5500",
             "webRoot": "${workspaceFolder}"
         }, {
-            "name": "Python: Arquivo Atual",
+            "name": "Python: Debug (Launch)",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
         }, {
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Core: Debug (Launch)",
+
             "type": "coreclr",
             "request": "launch",
             "WARNING01": "*********************************************************************************",
@@ -38,16 +59,11 @@
             "WARNING16": "button at the bottom of this file.",
             "WARNING17": "*********************************************************************************",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/<insert-target-framework-here>/<insert-project-name-here>.dll",
+            "program": "${workspaceFolder}/Especificas/C#/bin/BPC/Debug/netcoreapp2.2/C#.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
-        }, {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
         }
     ]
 }
