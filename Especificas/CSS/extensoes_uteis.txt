@@ -1,0 +1,6 @@
+Extensões Úteis:
+IntelliSense for CSS class names in HTML
+CSS Peek
+Beautify css/sass/scss/less
+CSS Preview
+CSS Compressor

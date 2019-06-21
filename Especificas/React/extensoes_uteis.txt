@@ -1,0 +1,7 @@
+Extensões Úteis:
+React Native Tools
+ES7 React/Redux/GraphQL/React-Native snippets
+(React-Native/React/Redux snippets for es6/es7)
+(Full React/React Native/React Router/Redux/GraphQL/ES7/Testing/PropTypes snippets)
+React Extension Pack
+

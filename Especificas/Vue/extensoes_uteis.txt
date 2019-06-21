@@ -1,0 +1,4 @@
+Extensões Úteis:
+TSLint Vue
+Vetur
+Vue Extension Pack

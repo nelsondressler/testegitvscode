@@ -1,0 +1,7 @@
+Extensões Úteis:
+Android
+Android WebView Debugging
+Logcat
+Android iOS Emulator
+iOS Snippets
+iOS Common Files

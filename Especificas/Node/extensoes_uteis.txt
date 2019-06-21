@@ -1,0 +1,8 @@
+Extensões Úteis:
+Node Debug
+npm
+npm Intellisense
+Node Exec
+Node Snippets
+Node Require
+Node Essentials

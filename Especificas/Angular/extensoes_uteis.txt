@@ -1,0 +1,5 @@
+Extensões Úteis:
+Angular 8 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout
+Angular Essentials
+Angular Extension Pack
+Angular Productivity Pack

@@ -1,0 +1,5 @@
+Extensões Úteis:
+TypeScript Hero
+Move TS - Move TypeScript files and update relative imports
+JSON to TS
+TypeScript Import

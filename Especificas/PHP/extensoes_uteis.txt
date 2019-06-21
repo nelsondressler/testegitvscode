@@ -1,0 +1,6 @@
+Extensões Úteis:
+PHP IntelliSense
+PHP Debug
+PHP Namespace Resolver
+PHP Getters & Setters
+PHP Extension Pack

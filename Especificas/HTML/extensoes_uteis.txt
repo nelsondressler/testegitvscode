@@ -1,0 +1,8 @@
+Extensões Úteis:
+HTML Snippets
+IntelliSense for CSS class names in HTML
+HTML Boilerplate
+Sorting HTML and Jade attributes
+Auto Rename Tag
+Auto Close Tag
+Dummy Text Generator
