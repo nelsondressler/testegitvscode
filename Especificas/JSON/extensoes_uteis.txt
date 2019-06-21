@@ -1,0 +1,3 @@
+Extensões Úteis:
+Paste JSON as Code
+Prettify JSON

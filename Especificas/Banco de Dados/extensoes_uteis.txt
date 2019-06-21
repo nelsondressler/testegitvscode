@@ -1,0 +1,5 @@
+Extensões Úteis:
+SQL Server (mssql)
+SQLTools
+SQLite
+Mongo Runner

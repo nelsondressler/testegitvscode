@@ -1,0 +1,5 @@
+Extensões Úteis:
+Ionic Preview
+Ionic 4 Snippets
+Cordova Tools
+Ionic Extension Pack

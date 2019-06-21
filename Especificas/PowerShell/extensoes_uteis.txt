@@ -1,0 +1,4 @@
+Extensões Úteis:
+PowerShell
+PowerShell Pro Tools
+PowerShell Stack Overflow Search

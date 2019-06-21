@@ -1,0 +1,4 @@
+Extensões Úteis:
+Markdown Preview Enhanced
+markdownlint
+Markdown All in One

@@ -1,0 +1,4 @@
+Extensões Úteis:
+Bash Debug
+Bash Beautify
+Bash IDE

@@ -1,0 +1,1743 @@
+<!DOCTYPE html><html><head>
+      <title>ApostilaCompletaVSCode</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\njdressler\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.4.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="vs-code-produtividade-infinita">VS Code: Produtividade Infinita</h1>
+
+<ul>
+<li><a href="#vs-code-produtividade-infinita">VS Code: Produtividade Infinita</a>
+<ul>
+<li><a href="#produtividade-200---iniciando-no-vs-code-da-melhor-maneira">Produtividade 200% - Iniciando no VS Code da melhor maneira</a>
+<ul>
+<li><a href="#o-b%C3%A1sico-do-vs-code">O b&#xE1;sico do VS Code</a>
+<ul>
+<li><a href="#o-que-%C3%A9-o-vs-code">O que &#xE9; o VS Code</a></li>
+<li><a href="#a-interface-de-usu%C3%A1rio">A interface de usu&#xE1;rio</a></li>
+<li><a href="#trabalhando-com-workspace">Trabalhando com Workspace</a></li>
+<li><a href="#m%C3%BAltiplos-arquivos-editores">M&#xFA;ltiplos arquivos (editores)</a></li>
+<li><a href="#editando-v%C3%A1rias-linhas-por-vez">Editando v&#xE1;rias linhas por vez</a></li>
+<li><a href="#renomeando-de-forma-f%C3%A1cil">Renomeando de forma f&#xE1;cil</a></li>
+<li><a href="#usando-o-terminal-embutido">Usando o terminal embutido</a></li>
+<li><a href="#pesquise-em-v%C3%A1rios-lugares-de-uma-vez-s%C3%B3">Pesquise em v&#xE1;rios lugares de uma vez s&#xF3;</a></li>
+</ul>
+</li>
+<li><a href="#status-bar">Status Bar</a>
+<ul>
+<li><a href="#mudando-o-tipo-do-arquivo">Mudando o tipo do arquivo</a></li>
+<li><a href="#mudando-o-formato-da-identa%C3%A7%C3%A3o">Mudando o formato da identa&#xE7;&#xE3;o</a></li>
+<li><a href="#navegando-entre-linhas">Navegando entre linhas</a></li>
+<li><a href="#notifica%C3%A7%C3%B5es">Notifica&#xE7;&#xF5;es</a></li>
+<li><a href="#warnings-e-erros">Warnings e Erros</a></li>
+</ul>
+</li>
+<li><a href="#activity-bar">Activity Bar</a>
+<ul>
+<li><a href="#explorer">Explorer</a></li>
+<li><a href="#search">Search</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#debug">Debug</a></li>
+<li><a href="#extens%C3%B5es">Extens&#xF5;es</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#produtividade-500---aprimorando-nas-tarefas-do-dia-a-dia">Produtividade 500% - Aprimorando nas tarefas do dia a dia</a>
+<ul>
+<li><a href="#atalhos">Atalhos</a>
+<ul>
+<li><a href="#atalhos---vs-code-workspace">Atalhos - VS Code Workspace</a>
+<ul>
+<li><a href="#ocultar-a-activity-bar-barra-esquerda">Ocultar a Activity Bar (barra esquerda)</a></li>
+<li><a href="#paleta-de-comandos">Paleta de Comandos</a></li>
+<li><a href="#buscar-por-s%C3%ADmbolos">Buscar por s&#xED;mbolos</a></li>
+<li><a href="#abrir-terminal">Abrir terminal</a></li>
+<li><a href="#abrir-novo-terminal">Abrir novo terminal</a></li>
+<li><a href="#abrir-terminal-nativo">Abrir terminal nativo</a></li>
+<li><a href="#mostrar-erros">Mostrar Erros</a></li>
+<li><a href="#navegar-entre-erros">Navegar entre erros</a></li>
+</ul>
+</li>
+<li><a href="#atalhos---arquivo">Atalhos - Arquivo</a>
+<ul>
+<li><a href="#abrir-um-arquivo">Abrir um arquivo</a></li>
+<li><a href="#formatar-o-arquivo">Formatar o arquivo</a></li>
+<li><a href="#mover-arquivo-para-o-outro-lado">Mover arquivo para o outro lado</a></li>
+<li><a href="#diminuiraumentar-%C3%A1rea-da-sele%C3%A7%C3%A3o">Diminuir/Aumentar &#xE1;rea da sele&#xE7;&#xE3;o</a></li>
+<li><a href="#visualizar-preview">Visualizar Preview</a></li>
+<li><a href="#abrirfechar-blocos-de-escopo">Abrir/Fechar blocos de escopo</a></li>
+<li><a href="#ativar-o-intellisense-dicas-para-completar-a-digita%C3%A7%C3%A3o">Ativar o IntelliSense (dicas para completar a digita&#xE7;&#xE3;o)</a></li>
+<li><a href="#peek-mostrar-a-defini%C3%A7%C3%A3o-f12-sem-sair-do-arquivo-atual">Peek (Mostrar a Defini&#xE7;&#xE3;o (F12) sem sair do arquivo atual)</a></li>
+</ul>
+</li>
+<li><a href="#atalhos---linhas">Atalhos - Linhas</a>
+<ul>
+<li><a href="#selecionar-toda-a-linha">Selecionar toda a linha</a></li>
+<li><a href="#recortar-toda-a-linha">Recortar toda a linha</a></li>
+<li><a href="#adicionar-cursor-na-linha-acimaabaixo">Adicionar cursor na linha acima/abaixo</a></li>
+<li><a href="#mover-linha-para-cimabaixo">Mover linha para cima/baixo</a></li>
+<li><a href="#clonar-linha-para-cimabaixo">Clonar linha para cima/baixo</a></li>
+<li><a href="#ir-para-o-fiminicio-da-linha">Ir para o Fim/Inicio da linha</a></li>
+<li><a href="#selecionar-at%C3%A9-o-fiminicio-da-linha">Selecionar at&#xE9; o Fim/Inicio da linha</a></li>
+<li><a href="#selecionar-toda-a-palavra">Selecionar toda a palavra</a></li>
+<li><a href="#selecionar-todas-as-palavras-iguais">Selecionar todas as palavras iguais</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#opera%C3%A7%C3%B5es-com-a-paleta-de-comandos">Opera&#xE7;&#xF5;es com a Paleta de Comandos</a>
+<ul>
+<li><a href="#permitir-acesso-via-terminal-visual-code-cli">Permitir acesso via Terminal (Visual Code CLI)</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-com-linha">Opera&#xE7;&#xF5;es com linha</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-de-desenvolvedor">Opera&#xE7;&#xF5;es de Desenvolvedor</a></li>
+<li><a href="#comandos-do-emmet">Comandos do Emmet</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-com-arquivos">Opera&#xE7;&#xF5;es com Arquivos</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-de-teletransporte">Opera&#xE7;&#xF5;es de &apos;Teletransporte&apos;</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-com-extens%C3%B5es">Opera&#xE7;&#xF5;es com Extens&#xF5;es</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-para-acabar-com-suas-d%C3%BAvidas">Opera&#xE7;&#xF5;es para acabar com suas d&#xFA;vidas</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-com-as-prefer%C3%AAcias">Opera&#xE7;&#xF5;es com as Prefer&#xEA;cias</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-com-o-terminal">Opera&#xE7;&#xF5;es com o Terminal</a></li>
+<li><a href="#opera%C3%A7%C3%B5es-para-modificar-sua-visualiza%C3%A7%C3%A3o">Opera&#xE7;&#xF5;es para Modificar sua visualiza&#xE7;&#xE3;o</a></li>
+<li><a href="#modo-zen">Modo Zen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#produtividade-1000---se-tornando-um-mestre-do-vs-code">Produtividade 1000% - Se tornando um mestre do VS Code</a>
+<ul>
+<li><a href="#customizando-o-vs-code">Customizando o VS Code</a>
+<ul>
+<li><a href="#temas">Temas</a></li>
+<li><a href="#fontes">Fontes</a></li>
+<li><a href="#%C3%ADcones">&#xCD;cones</a></li>
+<li><a href="#customizando-via-json">Customizando via JSON</a></li>
+</ul>
+</li>
+<li><a href="#depura%C3%A7%C3%A3o-de-c%C3%B3digo-debug">Depura&#xE7;&#xE3;o de C&#xF3;digo (Debug)</a>
+<ul>
+<li><a href="#depurando-com-o-vs-code">Depurando com o VS Code</a>
+<ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#watch">Watch</a></li>
+</ul>
+</li>
+<li><a href="#breakpoints">Breakpoints</a>
+<ul>
+<li><a href="#tipos-de-breakpoint">Tipos de Breakpoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#produtividade-8000---evoluindo-ainda-mais-nas-tarefas">Produtividade +8000% - Evoluindo ainda mais nas tarefas</a>
+<ul>
+<li><a href="#keymaps">KeyMaps</a></li>
+<li><a href="#emmets">Emmets</a></li>
+<li><a href="#snippets">Snippets</a></li>
+</ul>
+</li>
+<li><a href="#produtividade-250000---indo-rumo-ao-infinito">Produtividade 250000% - Indo rumo ao infinito</a>
+<ul>
+<li><a href="#controle-de-vers%C3%B5es-com-git">Controle de Vers&#xF5;es com GIT</a></li>
+<li><a href="#lints">Lints</a></li>
+<li><a href="#recomenda%C3%A7%C3%B5es">Recomenda&#xE7;&#xF5;es</a></li>
+<li><a href="#formatadores-beautification">Formatadores (Beautification)</a></li>
+</ul>
+</li>
+<li><a href="#produtividade-1000000---t%C3%B3picos-avan%C3%A7ados-apenas-um-passo-para-o-infinito">Produtividade 1000000% - T&#xF3;picos Avan&#xE7;ados, apenas um passo para o infinito</a>
+<ul>
+<li><a href="#whitespaces">Whitespaces</a></li>
+<li><a href="#auto-save">Auto Save</a></li>
+<li><a href="#copiar-e-colar-multiplas-linhas">Copiar e colar multiplas linhas</a></li>
+<li><a href="#customizar-barra-de-t%C3%ADtulo">Customizar barra de t&#xED;tulo</a></li>
+<li><a href="#selecionar-apenas-uma-%C3%A1rea-espec%C3%ADfica">Selecionar apenas uma &#xE1;rea espec&#xED;fica</a></li>
+<li><a href="#fira-code-com-font-ligatures">Fira Code com Font Ligatures</a></li>
+<li><a href="#breadcrumbs-auxiliares-de-navega%C3%A7%C3%A3o">Breadcrumbs (Auxiliares de navega&#xE7;&#xE3;o)</a></li>
+<li><a href="#linhas-vazias">Linhas Vazias</a></li>
+<li><a href="#delimitar-sele%C3%A7%C3%A3o">Delimitar Sele&#xE7;&#xE3;o</a></li>
+<li><a href="#testes-unit%C3%A1rios">Testes Unit&#xE1;rios</a></li>
+</ul>
+</li>
+<li><a href="#produtividade-%E2%88%9E---alcan%C3%A7ando-o-infinito">Produtividade &#x221E; - Alcan&#xE7;ando o Infinito</a>
+<ul>
+<li><a href="#extens%C3%B5es---gerais">Extens&#xF5;es - Gerais</a>
+<ul>
+<li><a href="#code-runner">Code Runner</a></li>
+<li><a href="#live-server">Live Server</a></li>
+<li><a href="#debugger-for-chrome">Debugger for chrome</a></li>
+<li><a href="#sftp">SFTP</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#regex-previewer">Regex Previewer</a></li>
+<li><a href="#azure-tools">Azure Tools</a></li>
+<li><a href="#visual-studio-intellicode">Visual Studio IntelliCode</a></li>
+<li><a href="#spell-checker">Spell Checker</a></li>
+<li><a href="#gitlens">GitLens</a></li>
+<li><a href="#indent-rainbow">Indent Rainbow</a></li>
+<li><a href="#beautify">Beautify</a></li>
+<li><a href="#kanban">Kanban</a></li>
+<li><a href="#todo-tree">Todo Tree</a></li>
+<li><a href="#auto-close-tag">Auto Close Tag</a></li>
+<li><a href="#bracket-pair-colorizer">Bracket Pair Colorizer</a></li>
+<li><a href="#better-comments">Better Comments</a></li>
+<li><a href="#minify">Minify</a></li>
+<li><a href="#bookmark">Bookmark</a></li>
+<li><a href="#mark-jump">Mark Jump</a></li>
+<li><a href="#gi">Gi</a></li>
+<li><a href="#settings-sync">Settings Sync</a></li>
+<li><a href="#wakatime">WakaTime</a></li>
+<li><a href="#rest-client">REST Client</a></li>
+<li><a href="#path-intellisense">Path Intellisense</a></li>
+<li><a href="#partial-diff">Partial Diff</a></li>
+<li><a href="#tinypng">TinyPNG</a></li>
+<li><a href="#polacode">Polacode</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---markdown">Extens&#xF5;es - Markdown</a>
+<ul>
+<li><a href="#markdown-preview-enhanced">Markdown Preview Enhanced</a></li>
+<li><a href="#markdown-all-in-one">Markdown All in One</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---json">Extens&#xF5;es - JSON</a>
+<ul>
+<li><a href="#paste-json-as-code">Paste JSON as Code</a></li>
+<li><a href="#prettify-json">Prettify JSON</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---python">Extens&#xF5;es - Python</a>
+<ul>
+<li><a href="#python">Python</a></li>
+<li><a href="#python-preview">Python Preview</a></li>
+<li><a href="#anaconda-extension-pack">Anaconda Extension Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---java">Extens&#xF5;es - Java</a>
+<ul>
+<li><a href="#language-support-for-javatm-by-red-hat">Language Support for Java(TM) by Red Hat</a></li>
+<li><a href="#debugger-for-java">Debugger for Java</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---c-e-dotnetcore">Extens&#xF5;es - C# e DotNetCore</a>
+<ul>
+<li><a href="#c">C#</a></li>
+<li><a href="#c-extensions">C# Extensions</a></li>
+<li><a href="#c-xml-documentation-comments">C# XML Documentation Comments</a></li>
+<li><a href="#awesome-dotnetcore-pack">Awesome DotNetCore Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---cc">Extens&#xF5;es - C/C++</a>
+<ul>
+<li><a href="#cc">C/C++</a></li>
+<li><a href="#cc-extension-pack">C/C++ Extension Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---banco-de-dados">Extens&#xF5;es - Banco de Dados</a>
+<ul>
+<li><a href="#sql-server-mssql">SQL Server (Mssql)</a></li>
+<li><a href="#sqltools">SQLTools</a></li>
+<li><a href="#sqlite">SQLite</a></li>
+<li><a href="#mongo-runner">Mongo Runner</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---html">Extens&#xF5;es - HTML</a>
+<ul>
+<li><a href="#html-snippets">HTML Snippets</a></li>
+<li><a href="#html-boilerplate">HTML Boilerplate</a></li>
+<li><a href="#sorting-html-and-jade-attributes">Sorting HTML and Jade attributes</a></li>
+<li><a href="#auto-rename-tag">Auto Rename Tag</a></li>
+<li><a href="#dummy-text-generator">Dummy Text Generator</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---csssass">Extens&#xF5;es - CSS/SASS</a>
+<ul>
+<li><a href="#css-peek">CSS Peek</a></li>
+<li><a href="#intellisense-for-css-class-names-in-html">IntelliSense for CSS class names in HTML</a></li>
+<li><a href="#css-preview">CSS Preview</a></li>
+<li><a href="#css-compressor">CSS Compressor</a></li>
+<li><a href="#beautify-csssassscssless">Beautify css/sass/scss/less</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---typescript">Extens&#xF5;es - TypeScript</a>
+<ul>
+<li><a href="#typescript-hero">TypeScript Hero</a></li>
+<li><a href="#move-ts">Move TS</a></li>
+<li><a href="#typescript-import">TypeScript Import</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---javascript">Extens&#xF5;es - JavaScript</a>
+<ul>
+<li><a href="#turbo-consolelog">Turbo Console.log()</a></li>
+<li><a href="#javascript-es6-code-snippets">JavaScript (ES6) code snippets</a></li>
+<li><a href="#javascript-booster">JavaScript Booster</a></li>
+<li><a href="#eslint">ESLint</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---angular">Extens&#xF5;es - Angular</a>
+<ul>
+<li><a href="#angular-8-snippets">Angular 8 Snippets</a></li>
+<li><a href="#angular-extension-pack">Angular Extension Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---react">Extens&#xF5;es - React</a>
+<ul>
+<li><a href="#react-native-tools">React Native Tools</a></li>
+<li><a href="#es7-reactreduxgraphqlreact-native-snippets">ES7 React/Redux/GraphQL/React-Native snippets</a></li>
+<li><a href="#react-extension-pack">React Extension Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---nodejs">Extens&#xF5;es - Node.JS</a>
+<ul>
+<li><a href="#npm">NPM</a></li>
+<li><a href="#npm-intellissense">NPM Intellissense</a></li>
+<li><a href="#node-debug">Node Debug</a></li>
+<li><a href="#node-exec">Node Exec</a></li>
+<li><a href="#node-snippets">Node Snippets</a></li>
+<li><a href="#node-essentials">Node Essentials</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---vue">Extens&#xF5;es - Vue</a>
+<ul>
+<li><a href="#vetur">Vetur</a></li>
+<li><a href="#vuejs-extension-pack">Vue.js Extension Pack</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---php">Extens&#xF5;es - PHP</a>
+<ul>
+<li><a href="#php-intellisense">PHP IntelliSense</a></li>
+<li><a href="#php-debug">PHP Debug</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---bash">Extens&#xF5;es - BASH</a>
+<ul>
+<li><a href="#bash-debug">Bash Debug</a></li>
+<li><a href="#bash-beautify">Bash Beautify</a></li>
+<li><a href="#bash-ide">Bash IDE</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---powershell">Extens&#xF5;es - PowerShell</a>
+<ul>
+<li><a href="#powershell">PowerShell</a></li>
+<li><a href="#powershell-pro-tools">PowerShell Pro Tools</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---ruby">Extens&#xF5;es - Ruby</a>
+<ul>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#ruby-on-rails">Ruby on Rails</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---go">Extens&#xF5;es - Go</a>
+<ul>
+<li><a href="#go">Go</a></li>
+</ul>
+</li>
+<li><a href="#extens%C3%B5es---haskell">Extens&#xF5;es - Haskell</a>
+<ul>
+<li><a href="#haskelly">Haskelly</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#produtividade-%E2%88%9E---chegamos-ao-inifito">Produtividade &#x221E; - Chegamos ao inifito</a></li>
+<li><a href="#produtividade-%E2%88%9E%C2%B2---os-extras">Produtividade &#x221E;&#xB2; - Os Extras</a>
+<ul>
+<li><a href="#extra-materiais-de-ensino">Extra: Materiais de Ensino</a></li>
+<li><a href="#extra-lista-de-diversos-outros-atalhos">Extra: Lista de Diversos Outros Atalhos</a></li>
+<li><a href="#extra-personaliza%C3%A7%C3%A3o">Extra: Personaliza&#xE7;&#xE3;o</a>
+<ul>
+<li><a href="#extra-dica-de-temas">Extra: Dica de Temas</a></li>
+<li><a href="#extra-dicas-de-fontes">Extra: Dicas de Fontes</a></li>
+<li><a href="#extra-dica-de-icones">Extra: Dica de Icones</a></li>
+<li><a href="#extra-configura%C3%A7%C3%B5es-produtividade-10000">Extra: Configura&#xE7;&#xF5;es Produtividade 10000%</a></li>
+<li><a href="#extra-configura%C3%A7%C3%B5es-customiza%C3%A7%C3%A3o-10000">Extra: Configura&#xE7;&#xF5;es Customiza&#xE7;&#xE3;o 10000%</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#b%C3%B4nus">B&#xF4;nus</a>
+<ul>
+<li><a href="#b%C3%B4nus-cursos-gratuitos-de-vs-code">B&#xF4;nus: Cursos Gratuitos de VS Code</a></li>
+</ul>
+</li>
+<li><a href="#autores">Autores</a>
+<ul>
+<li><a href="#felipe-cabrera-ribeiro-dos-santos">Felipe Cabrera Ribeiro dos Santos</a></li>
+<li><a href="#bylearn-cursos-online">ByLearn Cursos Online</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="produtividade-200-iniciando-no-vs-code-da-melhor-maneira">Produtividade 200% - Iniciando no VS Code da melhor maneira</h2>
+
+<p>Aprenda o b&#xE1;sico do VS Code de uma forma bm produtiva e eficaz, para saber como tirar vantagens at&#xE9; mesmo das op&#xE7;&#xF5;es, ferramentas e menus mais b&#xE1;sicos e f&#xE1;ceis do VS Code!</p>
+<hr>
+<h3 class="mume-header" id="o-b%C3%A1sico-do-vs-code">O b&#xE1;sico do VS Code</h3>
+
+<p>Aprenda o b&#xE1;sico a se saber do VS Code, com isso voc&#xEA; j&#xE1; ter&#xE1; o minimo para poder utiliz&#xE1;-lo em qualquer um de seus projetos &#x1F603;</p>
+<h4 class="mume-header" id="o-que-%C3%A9-o-vs-code">O que &#xE9; o VS Code</h4>
+
+<p>O Visual Studio Code &#xE9; um editor de c&#xF3;digo-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depura&#xE7;&#xE3;o, controle Git incorporado, realce de sintaxe, complementa&#xE7;&#xE3;o inteligente de c&#xF3;digo, snippets e refatora&#xE7;&#xE3;o de c&#xF3;digo. Ele tamb&#xE9;m &#xE9; customiz&#xE1;vel, fazendo com que os usu&#xE1;rios possam mudar o tema do editor, teclas de atalho e prefer&#xEA;ncias.</p>
+<p>Ele &#xE9; um software livre e de c&#xF3;digo aberto, apesar do download oficial estar sob uma licen&#xE7;a propriet&#xE1;ria.</p>
+<h4 class="mume-header" id="a-interface-de-usu%C3%A1rio">A interface de usu&#xE1;rio</h4>
+
+<p><img src="https://code.visualstudio.com/assets/docs/getstarted/userinterface/hero.png" alt="interface de usu&#xE1;rio"></p>
+<ul>
+<li><strong>A:</strong> Activity Bar &#xE9; a barrinha lateral onde voc&#xEA; pode mudar as &apos;Views&apos; da SideBar, como Explorer, Pesquisas, Git, Debug, Extens&#xF5;es (veremos mais a fundo abaixo);</li>
+<li><strong>B:</strong> Side bar &#xE9; onde teremos as op&#xE7;&#xF5;es espec&#xED;ficas da &apos;View&apos; selecionada na Activity Bar;</li>
+<li><strong>C:</strong> Editor Groups s&#xE3;o os grupos dos editores, a parte principal do programa, onde escrevemos nosso c&#xF3;digo, ele &#xE9; formado por Abas (tabs), que s&#xE3;o os arquivos abertos no momento;</li>
+<li><strong>D:</strong> Aqui temos os paineis do VS Code, nele temos nosso Output (a sa&#xED;da do programa), o Console de Debug, Terminais e Problemas (Erros e Warnings, que veremos adiante);</li>
+<li><strong>E:</strong> Por fim, a status bar, a barrinha no canto inferior, serve para facilitar nossa vida com alguns atalhos r&#xE1;pidos e bem &#xFA;teis que falaremos mais no decorrer desse livro.</li>
+</ul>
+<h4 class="mume-header" id="trabalhando-com-workspace">Trabalhando com Workspace</h4>
+
+<p>Workspace serve como uma &apos;pasta&apos; especial do VS Code onde ficar&#xE3;o todos os arquivos do nosso projeto, todos os arquivos que iremos trabalhar na janela atual do VS Code. O melhor de tudo &#xE9; que cada Workspace pode armazenar configura&#xE7;&#xF5;es pr&#xF3;prias e salvar os estados atuais de cada arquivo/projeto.</p>
+<h4 class="mume-header" id="m%C3%BAltiplos-arquivos-editores">M&#xFA;ltiplos arquivos (editores)</h4>
+
+<p>Por que editar um arquivo por vez se podemos editar mais? Um bom programador sempre edita no minimo 5 arquivos por vez! Brincadeiras a parte, visualizar v&#xE1;rios arquivos por v&#xEA;s &#xE9; algo muito bom, voc&#xEA; consegue compar&#xE1;-los, analis&#xE1;-los e at&#xE9; alter&#xE1;-los se necess&#xE1;rio.</p>
+<p>Para isso, basta apertar <em>Ctrl + ]</em> e voc&#xEA; ir&#xE1; dividir a tela do VS Code.</p>
+<h4 class="mume-header" id="editando-v%C3%A1rias-linhas-por-vez">Editando v&#xE1;rias linhas por vez</h4>
+
+<p>Um recurso bem interessante do VS Code &#xE9; a op&#xE7;&#xE3;o de m&#xFA;ltiplos cursores ao mesmo tempo. Para tal fun&#xE7;&#xE3;o, precisamos apenas segurar a tela <em>ALT</em> e clicar nas posi&#xE7;&#xF5;es onde queremos que os cursores sejam inseridos.</p>
+<h4 class="mume-header" id="renomeando-de-forma-f%C3%A1cil">Renomeando de forma f&#xE1;cil</h4>
+
+<p>Esque&#xE7;a ficar renomeando vari&#xE1;veis uma a uma! Basta selecionar a vari&#xE1;vel, m&#xE9;todo ou classe desejada e apertar <em>F2</em>. Ap&#xF3;s renomear a selecionada, todas as ocorr&#xEA;ncias no projeto tamb&#xE9;m mudar&#xE3;o para o que voc&#xEA; escolheu.</p>
+<h4 class="mume-header" id="usando-o-terminal-embutido">Usando o terminal embutido</h4>
+
+<p>Voc&#xEA; sabia que o VS Code tem um terminal embutido? Basta apertar <em>Ctrl + Shift + &apos;</em> e ser&#xE1; criado um novo terminal. Lembre-se sempre de us&#xE1;-lo quando for preciso algum comando bash, por exemplo. Abrir o terminal do nativo do sistema &#xE9; apenas um gasto de tempo.</p>
+<h4 class="mume-header" id="pesquise-em-v%C3%A1rios-lugares-de-uma-vez-s%C3%B3">Pesquise em v&#xE1;rios lugares de uma vez s&#xF3;</h4>
+
+<p>Usando a fun&#xE7;&#xE3;o Search da Activity Bar (logo abaixo explicaremos melhor) voc&#xEA; pode procurar algo em Todos os arquivos do projeto, te polpando e muito o tempo.</p>
+<hr>
+<h3 class="mume-header" id="status-bar">Status Bar</h3>
+
+<p>A Status bar &#xE9; a barrinha que fica na parte inferior do VS Code, possuindo originalmente uma colora&#xE7;&#xE3;o azul clara, possuindo v&#xE1;rias op&#xE7;&#xF5;es padr&#xF5;es que ir&#xE3;o acelerar nossa produtividade.</p>
+<p><img src="https://i.imgur.com/RCu4gOO.jpg" alt="StatusBar"></p>
+<h4 class="mume-header" id="mudando-o-tipo-do-arquivo">Mudando o tipo do arquivo</h4>
+
+<p>Na Status Bar podemos alterar o tipo de arquivo antes de salvar ou caso por algum motivo o VS Code tenha errado na hora de detectar. Para isso, basta apertar na op&#xE7;&#xE3;o ao lado esquerdo do rosto sorridente (no canto direito), onde provavelmente estar&#xE1; &quot;Plain Text&quot; caso n&#xE3;o tenha escolhido nenhum tipo ainda.</p>
+<p><img src="https://i.imgur.com/KV7Qtaa.jpg" alt="StatusBar - Mudar Tipo Do Arquivo"></p>
+<h4 class="mume-header" id="mudando-o-formato-da-identa%C3%A7%C3%A3o">Mudando o formato da identa&#xE7;&#xE3;o</h4>
+
+<p>Na parte direita da Status Bar tamb&#xE9;m temos &quot;Spaces: 4&quot;, l&#xE1; podemos mudar o formato da identa&#xE7;&#xE3;o (Espa&#xE7;o ou Tab).</p>
+<p><img src="https://i.imgur.com/DRzNyKC.jpg" alt="StatusBar - Identa&#xE7;&#xE3;o"></p>
+<h4 class="mume-header" id="navegando-entre-linhas">Navegando entre linhas</h4>
+
+<p>Um arquivo grande &#xE9; sempre horr&#xED;vel, ainda mais quando precisamos ir para uma determinada linha. Por&#xE9;m, com o VS Code n&#xF3;s podemos selecionar a linha desejada e o cursor &#xE9; &quot;Teletransportados&quot; para l&#xE1; &#x1F609; Para isso basta apertar na op&#xE7;&#xE3;o &quot;Ln , Col&quot; na parte direita da Status Bar.</p>
+<p><img src="https://i.imgur.com/38sA25C.jpg" alt="StatusBar - Go To Line"></p>
+<h4 class="mume-header" id="notifica%C3%A7%C3%B5es">Notifica&#xE7;&#xF5;es</h4>
+
+<p>Voc&#xEA; tamb&#xE9;m pode ter acesso as ultimas notifica&#xE7;&#xF5;es do VS Code, sejam elas de erro, instala&#xE7;&#xE3;o de extens&#xF5;es, atualiza&#xE7;&#xF5;es, pedidos de configura&#xE7;&#xE3;o e etc... Para isso basta clicar no sininho no canto direito da Status Bar.</p>
+<p><img src="https://i.imgur.com/mtvueri.jpg" alt="StatusBar - Notifica&#xE7;&#xF5;es"></p>
+<h4 class="mume-header" id="warnings-e-erros">Warnings e Erros</h4>
+
+<p>Para quem j&#xE1; usou o Visual Studio, a import&#xE2;ncia dessa fun&#xE7;&#xE3;o &#xE9; bem clara! Nela podemos saber todos os erros no nosso c&#xF3;digo e alguns avisos, seja de melhorias, poss&#xED;veis problemas ou dica para seguir algum guideline. Basta apertar o bot&#xE3;o do &apos;X&apos; ou tri&#xE2;ngulo na parte esquerda da Status Bar.</p>
+<p><img src="https://i.imgur.com/nKGqL01.jpg" alt="StatusBar - Warning e Erros"></p>
+<hr>
+<h3 class="mume-header" id="activity-bar">Activity Bar</h3>
+
+<p>&#xC9; a famosa barra lateral que fica no canto esquerdo do VS Code.<br>
+PS: A parte entre a Activity Bar e a parte onde escrevemos &#xE9; chamada de Side Bar &#x1F603;.</p>
+<p><img src="https://i.imgur.com/eOtcGf4.jpg" alt="Activity Bar"></p>
+<h4 class="mume-header" id="explorer">Explorer</h4>
+
+<p>Primeira op&#xE7;&#xE3;o da Activity Bar, &#xE9; nele que est&#xE3;o todos os arquivos do nosso Workspaces e todos os outros abertos na sess&#xE3;o atual do VS Code.</p>
+<ol>
+<li>Open Editors: Arquivos abertos e seus respectivos grupos;</li>
+<li>Workspace: Nosso Workspace atual e todos os arquivos e pastas contidos nele;</li>
+<li>Outline, indica os &apos;t&#xED;tulos&apos; e &apos;sess&#xF5;es&apos; do nosso arquivo atual se for um texto, ou vari&#xE1;veis, m&#xE9;todos e classes se estivermos com algum projeto aberto. Bem &#xFA;til para servir de atalho para navega&#xE7;&#xE3;o.</li>
+</ol>
+<p><img src="https://i.imgur.com/8ow6T6z.jpg" alt="Explorer"></p>
+<h4 class="mume-header" id="search">Search</h4>
+
+<p>&#xC1;rea respons&#xE1;vel pelas pesquisas, tanto no arquivo atual quanto no workspace e em todos os arquivos abertos no VS Code (pesquisando em todos de uma vez s&#xF3;). Tamb&#xE9;m &#xE9; poss&#xED;vel usar a fun&#xE7;&#xE3;o Replace para substituir todas as ocorr&#xEA;ncias da busca.</p>
+<p><img src="https://i.imgur.com/3J0gHCu.jpg" alt="Search"></p>
+<h4 class="mume-header" id="git">Git</h4>
+
+<p>Para os amantes do Git, o VS Code j&#xE1; vem com uma op&#xE7;&#xE3;o nativa bem potente (que veremos mais ao final), que nos permite controlar totalmente o reposit&#xF3;rio git do projeto, enviando commits, fazendo pushs e pulls, merges e etc...</p>
+<p><img src="https://i.imgur.com/cNeGH6y.jpg" alt="Git"></p>
+<h4 class="mume-header" id="debug">Debug</h4>
+
+<p>Uma das &#xE1;reas mais importante da Activity Bar ao mexermos com algum projeto, &#xE9; aqui que podemos debugar nosso c&#xF3;digo e analisar passo a passo o que est&#xE1; acontecendo no projeto.</p>
+<p><img src="https://i.imgur.com/VqcDDMj.jpg" alt="Debug"></p>
+<h4 class="mume-header" id="extens%C3%B5es">Extens&#xF5;es</h4>
+
+<p>Outra &#xE1;rea bem importante e interessante &#xE9; a parte de extens&#xF5;es, aqui podemos instalar v&#xE1;rias e v&#xE1;rias extens&#xF5;es que v&#xE3;o nos ajudar em 1000% a aprimorar nossa produtividade (voc&#xEA; ver&#xE1; v&#xE1;rias delas no final do curso).</p>
+<p><img src="https://i.imgur.com/Grr3UzU.jpg" alt="Extens&#xF5;es"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-500-aprimorando-nas-tarefas-do-dia-a-dia">Produtividade 500% - Aprimorando nas tarefas do dia a dia</h2>
+
+<p>Eleve o seu poder de programador a outro n&#xED;vel, torne tudo sua rotina cada vez mais f&#xE1;cil com os melhores atalhos e comandos r&#xE1;pidos do VS Code.</p>
+<h3 class="mume-header" id="atalhos">Atalhos</h3>
+
+<p>Conhe&#xE7;a os principais e mais &#xFA;teis atalhos do VS que v&#xE3;o aumentar e muito a sua produtividade.</p>
+<h4 class="mume-header" id="atalhos-vs-code-workspace">Atalhos - VS Code Workspace</h4>
+
+<h5 class="mume-header" id="ocultar-a-activity-bar-barra-esquerda">Ocultar a Activity Bar (barra esquerda)</h5>
+
+<p>Ctrl + B</p>
+<h5 class="mume-header" id="paleta-de-comandos">Paleta de Comandos</h5>
+
+<p>M&#xE9;todo 1: Ctrl + Shift + P<br>
+M&#xE9;todo 2: F1</p>
+<h5 class="mume-header" id="buscar-por-s%C3%ADmbolos">Buscar por s&#xED;mbolos</h5>
+
+<p>Ctrl + Shift + O</p>
+<h5 class="mume-header" id="abrir-terminal">Abrir terminal</h5>
+
+<p>Ctrl + &apos;</p>
+<h5 class="mume-header" id="abrir-novo-terminal">Abrir novo terminal</h5>
+
+<p>Ctrl + Shift + &apos;</p>
+<h5 class="mume-header" id="abrir-terminal-nativo">Abrir terminal nativo</h5>
+
+<p>Ctrl + Shift + C</p>
+<h5 class="mume-header" id="mostrar-erros">Mostrar Erros</h5>
+
+<p>Ctrl + Shift + M</p>
+<h5 class="mume-header" id="navegar-entre-erros">Navegar entre erros</h5>
+
+<p>F8 e Shift + F8 para avan&#xE7;ar e retroceder nos erros.</p>
+<h4 class="mume-header" id="atalhos-arquivo">Atalhos - Arquivo</h4>
+
+<h5 class="mume-header" id="abrir-um-arquivo">Abrir um arquivo</h5>
+
+<p>Ctrl + P</p>
+<h5 class="mume-header" id="formatar-o-arquivo">Formatar o arquivo</h5>
+
+<p>M&#xE9;todo 1: Ctrl + K , F<br>
+M&#xE9;todo 2: Shift + Alt + F</p>
+<h5 class="mume-header" id="mover-arquivo-para-o-outro-lado">Mover arquivo para o outro lado</h5>
+
+<p>Ctrl + Alt + Seta Esquerda/Direita</p>
+<h5 class="mume-header" id="diminuiraumentar-%C3%A1rea-da-sele%C3%A7%C3%A3o">Diminuir/Aumentar &#xE1;rea da sele&#xE7;&#xE3;o</h5>
+
+<p>Shift + Alt + Seta Esquerda/Direita</p>
+<h5 class="mume-header" id="visualizar-preview">Visualizar Preview</h5>
+
+<p>Ctrl + K, V</p>
+<h5 class="mume-header" id="abrirfechar-blocos-de-escopo">Abrir/Fechar blocos de escopo</h5>
+
+<p>Fechar: Ctrl + Shift + &#xB4;<br>
+Abrir: Ctrl + Shift + [</p>
+<h5 class="mume-header" id="ativar-o-intellisense-dicas-para-completar-a-digita%C3%A7%C3%A3o">Ativar o IntelliSense (dicas para completar a digita&#xE7;&#xE3;o)</h5>
+
+<p>Ctrl + Espa&#xE7;o</p>
+<h5 class="mume-header" id="peek-mostrar-a-defini%C3%A7%C3%A3o-f12-sem-sair-do-arquivo-atual">Peek (Mostrar a Defini&#xE7;&#xE3;o (F12) sem sair do arquivo atual)</h5>
+
+<p>Alt + F12</p>
+<h4 class="mume-header" id="atalhos-linhas">Atalhos - Linhas</h4>
+
+<h5 class="mume-header" id="selecionar-toda-a-linha">Selecionar toda a linha</h5>
+
+<p>Ctrl + L</p>
+<h5 class="mume-header" id="recortar-toda-a-linha">Recortar toda a linha</h5>
+
+<p>Ctrl + X (N&#xE3;o tendo nada selecionado).</p>
+<h5 class="mume-header" id="adicionar-cursor-na-linha-acimaabaixo">Adicionar cursor na linha acima/abaixo</h5>
+
+<p>Ctrl + Alt + Seta Cima/Baixo</p>
+<h5 class="mume-header" id="mover-linha-para-cimabaixo">Mover linha para cima/baixo</h5>
+
+<p>Alt + Seta Cima/Baixo</p>
+<h5 class="mume-header" id="clonar-linha-para-cimabaixo">Clonar linha para cima/baixo</h5>
+
+<p>Shift + Alt + Seta Cima/Baixo</p>
+<h5 class="mume-header" id="ir-para-o-fiminicio-da-linha">Ir para o Fim/Inicio da linha</h5>
+
+<p>In&#xED;cio: Home Fim: End</p>
+<h5 class="mume-header" id="selecionar-at%C3%A9-o-fiminicio-da-linha">Selecionar at&#xE9; o Fim/Inicio da linha</h5>
+
+<p>At&#xE9; o In&#xED;cio: Shift + Home<br>
+At&#xE9; o fim: Shift + End</p>
+<h5 class="mume-header" id="selecionar-toda-a-palavra">Selecionar toda a palavra</h5>
+
+<p>Deixe o cursor em qualquer parte da palavra escolhida e aperte: <em>Ctrl + D</em></p>
+<h5 class="mume-header" id="selecionar-todas-as-palavras-iguais">Selecionar todas as palavras iguais</h5>
+
+<p>Um dos atalhos mais legais (e prorpositalmente deixado por &#xFA;ltimo) &#xE9; o de selecionar todas as palavras iguais a sua. Para isso, selecione uma palavra como no atalho anterior (<em>Ctrl + D</em>) e aperte <em>D</em> novamente para cada palavra igual a essa que dejeja selecionar.</p>
+<p>Exemplo:</p>
+<pre data-role="codeBlock" data-info="{.java}" class="language- java"><code>public int funcao(int x)
+{
+    x++;
+    if(x % 2 != 0)
+        x++;
+
+    return x/2;
+}
+</code></pre><p>Deixar uma vari&#xE1;vel com nome &apos;X&apos; &#xE9; assassinar as boas pr&#xE1;ticas da programa&#xE7;&#xE3;o, &#xE9; imposs&#xED;vel saber o que ela est&#xE1; fazendo e qual a necessidade dela no c&#xF3;digo apenas batendo o olho! Precisamos mudar o nome para algo mais intuitivo, como filmeID.<br>
+Para isso, selecionamos qualquer um dos <em>&apos;x&apos;</em> e apertamos <em>Ctrl + D</em> at&#xE9; que todos estejam selecionados. Depois disso basta escrevermos &apos;<em>filmeID</em>&apos; que todos passar&#xE3;o a ter esse nome.</p>
+<hr>
+<h3 class="mume-header" id="opera%C3%A7%C3%B5es-com-a-paleta-de-comandos">Opera&#xE7;&#xF5;es com a Paleta de Comandos</h3>
+
+<h4 class="mume-header" id="permitir-acesso-via-terminal-visual-code-cli">Permitir acesso via Terminal (Visual Code CLI)</h4>
+
+<p>Procure por &apos;Shell&apos; e selecione &quot;Allow Workspace Shell Configuration&quot;</p>
+<p>Agora voc&#xEA; pode ir at&#xE9; o terminal (como o CMD, no caso do Windows) e abrir um arquivo no code via: &apos;code nome_do_arquivo.ext&apos;.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-com-linha">Opera&#xE7;&#xF5;es com linha</h4>
+
+<p>Procure por &apos;Line&apos; e voc&#xEA; encontrar&#xE1; todos os comandos envolvendo linha, tais como:</p>
+<ul>
+<li>Sort Lines Ascending: Ordenar as linhas de forma alfab&#xE9;tica;</li>
+<li>Join Lines: Junta todas as linhas selecionadas em uma s&#xF3;;</li>
+<li>Go to Line...: Vai at&#xE9; a linha selecionada.</li>
+</ul>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-de-desenvolvedor">Opera&#xE7;&#xF5;es de Desenvolvedor</h4>
+
+<p>Para saber as opera&#xE7;&#xF5;es e comandos para desenvolvedor basta pesquisar por &apos;Developer&apos;.</p>
+<h4 class="mume-header" id="comandos-do-emmet">Comandos do Emmet</h4>
+
+<p>Procure por &apos;Emmet&apos; para saber as principais op&#xE7;&#xF5;es e comandos para uso do Emmet no VS Code.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-com-arquivos">Opera&#xE7;&#xF5;es com Arquivos</h4>
+
+<p>Procure por &apos;File&apos; para saber as principais op&#xE7;&#xF5;es e comandos para os arquivos do VS Code.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-de-teletransporte">Opera&#xE7;&#xF5;es de &apos;Teletransporte&apos;</h4>
+
+<p>Ok... N&#xE3;o &#xE9; t&#xE3;o legal quanto um teletransporte, mas pelo menos &#xE9; &#xFA;til. Procurando por &apos;Go&apos; voc&#xEA; ter&#xE1; v&#xE1;rios comandos para levar voc&#xEA; at&#xE9; certo lugar, como um arquivo espec&#xED;fico, linha, s&#xED;mbolo e etc...</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-com-extens%C3%B5es">Opera&#xE7;&#xF5;es com Extens&#xF5;es</h4>
+
+<p>Procure por &apos;Extensions&apos; para saber os principais comandos com extens&#xF5;es, como por exemplo, atualizar as extens&#xF5;es instaladas.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-para-acabar-com-suas-d%C3%BAvidas">Opera&#xE7;&#xF5;es para acabar com suas d&#xFA;vidas</h4>
+
+<p>Para resolver suas d&#xFA;vidas e entender melhor do VS Code &#xE9; s&#xF3; procurar por &apos;Help&apos;.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-com-as-prefer%C3%AAcias">Opera&#xE7;&#xF5;es com as Prefer&#xEA;cias</h4>
+
+<p>Procure por &apos;Preferences&apos; para poder configurar as op&#xE7;&#xF5;es de prefer&#xEA;ncia, como temas, op&#xE7;&#xF5;es de usu&#xE1;rio e atalhos.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-com-o-terminal">Opera&#xE7;&#xF5;es com o Terminal</h4>
+
+<p>Procure por &apos;Terminal&apos; e voc&#xEA; encontrar&#xE1; os principais comandos para realizar com o terminal embutido do VS Code.</p>
+<h4 class="mume-header" id="opera%C3%A7%C3%B5es-para-modificar-sua-visualiza%C3%A7%C3%A3o">Opera&#xE7;&#xF5;es para Modificar sua visualiza&#xE7;&#xE3;o</h4>
+
+<p>Procure por &apos;View&apos; e voc&#xEA; ter&#xE1; in&#xFA;meras op&#xE7;&#xF5;es para editar a visualiza&#xE7;&#xE3;o padr&#xE3;o do VS Code, como fechar/abrir um editor, mostrar a aba de extens&#xF5;es, aba de busca e etc...</p>
+<h4 class="mume-header" id="modo-zen">Modo Zen</h4>
+
+<p>Um modo bem legal do VS Code &#xE9; o Modo Zen, que oculta tudo que pode te atrapalhar a escrever e deixa o editor em tela cheia mostrando apenas a parte onde escrevemos o texto. Para isso basta procurar por &apos;Zen&apos; na paleta de comandos e selecionar &apos;View: Toggle Zen Mode&apos;.</p>
+<p><img src="https://i.imgur.com/xlDPfYp.gif" alt="zenmode"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-1000-se-tornando-um-mestre-do-vs-code">Produtividade 1000% - Se tornando um mestre do VS Code</h2>
+
+<p>Vamos levar a produtividade para um outro n&#xED;vel!<br>
+Neste cap&#xED;tulo aprenderemos a deixar o VS Code a nossa cara e a como depurarmos nosso c&#xF3;digo de forma f&#xE1;cil e eficaz!</p>
+<h3 class="mume-header" id="customizando-o-vs-code">Customizando o VS Code</h3>
+
+<p>Agora chegou a hora de customizarmos o VS Code, para deix&#xE1;-lo ainda mais a nossa cara e podermos conseguir uma maior produtividade atrav&#xE9;s da familiaridade com a interface.</p>
+<p>De presente, deixaremos no final deste livro algumas dicas de customiza&#xE7;&#xE3;o, na sess&#xE3;o &apos;Extras&apos;, vale a pena conferir algumas dicas selecionadas a dedos (elas s&#xE3;o todas gratuitas) &#x1F603;</p>
+<h4 class="mume-header" id="temas">Temas</h4>
+
+<p>Para customizar temas &#xE9; muito f&#xE1;cil, basta abrir a paleta de comandos e procurar por:<br>
+&quot;Theme&quot; e selecionar &quot;Preferences: Color Theme&quot; e selecionar qual o tema desejado.</p>
+<p>Caso n&#xE3;o encontre l&#xE1; e queira achar algum outro, n&#xE3;o tem problema! Neste menu de sele&#xE7;&#xE3;o de temas n&#xF3;s temos uma op&#xE7;&#xE3;o &quot;Install Additional Color Themes&quot; basta apetar nela que somos direcionados a &#xE1;rea de extens&#xF5;es filtrando apenas por temas (&quot;category:themes&quot;).</p>
+<p>Agora s&#xF3; precisamos achar um que nos agrade e instal&#xE1;-lo!</p>
+<p><img src="https://i.imgur.com/mRHMjWh.png" alt="tema"></p>
+<h4 class="mume-header" id="fontes">Fontes</h4>
+
+<p>Para instalar fontes &#xE9; muito simples, basta clicar na engrenagem no canto inferior direito e escolher &quot;Settings&quot; e na janela que se abrir procurar por Font.<br>
+Teremos ent&#xE3;o &quot;Font Family&quot; que indica a familia da fonte, isto &#xE9;, qual a fonte em s&#xED; a ser usada e &quot;Font Size&quot;, que indica o tamanho da fonte.</p>
+<p><img src="https://i.imgur.com/JEU7V1T.png" alt="fontes"></p>
+<h4 class="mume-header" id="%C3%ADcones">&#xCD;cones</h4>
+
+<p>Outra coisa bem legal de se alterar s&#xE3;o os &#xED;cones. Eles servem, principalmente, para indicar o tipo do nosso arquivo atual, tanto na Side Bar quanto na pesquisa na hora de mudar o tipo do arquivo (como visto na sess&#xE3;o b&#xE1;sica do livro).</p>
+<p>Para edit&#xE1;-los, assim como fizemos com os Temas, vamos apertar F1 (ou Ctrl + Shift + P) para abrir a Paleta de Comandos e procuramos por &quot;Icon Theme&quot; e assim como com os Temas, caso n&#xE3;o encontremos um estilo de &#xED;cone do nosso gosto, basta selecionar a op&#xE7;&#xE3;o &quot;Install Additional File Icon Themes&quot; e o VS Code ir&#xE1; nos redirecionar para as extens&#xF5;es filtrando apenas as categorias onde ficam os temas de &#xED;cones.</p>
+<p><img src="https://i.imgur.com/IEb4qtc.png" alt="icones"></p>
+<h4 class="mume-header" id="customizando-via-json">Customizando via JSON</h4>
+
+<p>Por fim, para configurar via JSON n&#xF3;s podemos procurar na paleta de comandos (F1) por &quot;Settings JSON&quot; e selecionar &quot;Preferences: Open Settings (JSON)&quot;.</p>
+<p>Pronto, agora ir&#xE1; abrir um JSON que nos permite configurar o que quisermos no VS Code &#x1F603;. Todas as configura&#xE7;&#xF5;es feitas previamente (como tema, &#xED;cones, fontes e afins) podem ser editados diretamente por l&#xE1;.</p>
+<p>No final deste livro, na sess&#xE3;o Extras tamb&#xE9;m deixaremos um exemplo de configura&#xE7;&#xE3;o via JSON usados por n&#xF3;s da ByLearn para melhorar nossa efici&#xEA;ncia e produtividade.</p>
+<p><img src="https://i.imgur.com/k1XDkp1.png" alt="json"></p>
+<hr>
+<h3 class="mume-header" id="depura%C3%A7%C3%A3o-de-c%C3%B3digo-debug">Depura&#xE7;&#xE3;o de C&#xF3;digo (Debug)</h3>
+
+<h4 class="mume-header" id="depurando-com-o-vs-code">Depurando com o VS Code</h4>
+
+<p>Podemos depurar nosso c&#xF3;digo no VS Code de forma bem simples, basta na Title Bar (barra de titulo, na parte de cima) selecionarmos o menu Debug e escolher a op&#xE7;&#xE3;o &apos;Start Debugging&apos;, ou simplesmente apertar o bot&#xE3;o F5.</p>
+<p>Ap&#xF3;s isso o debug ira iniciar automaticamente.</p>
+<p><img src="https://i.imgur.com/mCvG8OK.png" alt="debug"></p>
+<h5 class="mume-header" id="variables">Variables</h5>
+
+<p>Indica as vari&#xE1;veis que est&#xE3;o em uso no atual momento no debug, como por exemplo, ao atingir um Breakpoint, mostrar&#xE1; as vari&#xE1;veis em uso e quais seus valores atuais.</p>
+<p><img src="https://i.imgur.com/CdJs0Of.png" alt="Variables"></p>
+<h5 class="mume-header" id="watch">Watch</h5>
+
+<p>Para ativar uma vari&#xE1;vel no Watch voc&#xEA; precisa apenas clicar no bot&#xE3;o com simbolo de mais (+) ao lado do nome Watch ou durante o debug selecionar alguma vari&#xE1;vel, abertar bot&#xE3;o direito e selecionar &apos;Debug: Add to Watch&apos;.</p>
+<p>A vari&#xE1;vel cujo nome foi inserido no Watch ir&#xE1; ficar sendo observado durante todo o c&#xF3;digo e apresentar&#xE1; informa&#xE7;&#xF5;es espec&#xED;ficas.</p>
+<p><img src="https://i.imgur.com/xEE5fYM.png" alt="Watch"></p>
+<h4 class="mume-header" id="breakpoints">Breakpoints</h4>
+
+<p>Os breaakpoints s&#xE3;o as condi&#xE7;&#xF5;es de parada da depura&#xE7;&#xE3;o. Caso um c&#xF3;digo atinja um breakpoint, ele ir&#xE1; &apos;travar&apos; at&#xE9; que o programador escolha continuar o c&#xF3;digo (F5).</p>
+<p>Para adicionar um Breakpoint, basta apertar ao lado esquerdo da numera&#xE7;&#xE3;o de linhas do editor, como mostra a imagem abaixo:</p>
+<p><img src="https://i.imgur.com/POAb5ZO.png" alt="Breakpointslinha"></p>
+<p>Tamb&#xE9;m temos como ver quais s&#xE3;o os breakpoints que colocamos no nosso c&#xF3;digo e quais Exceptions (erros) tamb&#xE9;m ir&#xE3;o efetuar um breakpoint.</p>
+<p><img src="https://i.imgur.com/pWaPWIa.png" alt="Breakpoints"></p>
+<h5 class="mume-header" id="tipos-de-breakpoint">Tipos de Breakpoint</h5>
+
+<p>O VS Code tem mais de um tipo de Breakpoint e para ativ&#xE1;-los, basta clicar com o bot&#xE3;o Direito do mouse na parte &#xE0; esquerda na numera&#xE7;&#xE3;o de linhas no editor</p>
+<ol>
+<li>Default: O normal, &#xE9; s&#xF3; o c&#xF3;digo chegar l&#xE1; que ele ir&#xE1; executar o Breakpoint;
+<ol>
+<li>Representado por um c&#xED;rculo vermelho.</li>
+</ol>
+</li>
+<li>Condicional: Precisa de uma condi&#xE7;&#xE3;o l&#xF3;gica para ativar o Breakpoint, algo como <em>&apos;x == 2&apos;</em>;
+<ol>
+<li>Representado por um c&#xED;rculo vermelho com um simbolo de igualdade (<em>=</em>) dentro dele.</li>
+</ol>
+</li>
+<li>Log Message: Bem diferente dos outros, ele n&#xE3;o pausa o c&#xF3;digo, apenas mostra uma mensagem no painel Debug Console. &#xD3;timo para substituir um <em>&apos;print()&apos;</em>.
+<ol>
+<li>Representado por um los&#xE2;ngulo vermelho</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/1NjT1C8.gif" alt="debug"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-8000-evoluindo-ainda-mais-nas-tarefas">Produtividade +8000% - Evoluindo ainda mais nas tarefas</h2>
+
+<p>Evolua e torne-se um programador supremo, fa&#xE7;a em um dia o que voc&#xEA; faria na semana. Escreva um 10% do c&#xF3;digo original e tenha o mesmo resultado com o Emmet e Snippets.</p>
+<hr>
+<h3 class="mume-header" id="keymaps">KeyMaps</h3>
+
+<p>Antes de come&#xE7;armos a falar dos &apos;atalhos&apos; mais complexos do Emmet e dos Snippets, vamos ter <strong>CERTEZA</strong> que voc&#xEA; est&#xE1; familiarizado com todos os atalhos do VS Code!</p>
+<p>Voc&#xEA; pode tanto dar uma nova lida nos atalhos mostrados anteriormente quanto tamb&#xE9;m mudar os atalhos atuais para outros que voc&#xEA; prefira e ache mais c&#xF4;modo. Para isso, basta irmos em &apos;<em>File &gt; Preferences &gt; Keyboard Shortcuts</em>&apos; e mudamos os atalhos que quisermos.</p>
+<p><img src="https://i.imgur.com/E0wrdIL.png" alt="CustomAtalho"></p>
+<p>Por&#xE9;m, se voc&#xEA; veio de algum outro editor de texto ou IDE (como o Visual Studio), voc&#xEA; pode se aproveitar do Keymap deles, fazendo os atalhos ficarem iguais aos que voc&#xEA; est&#xE1; acostumado &#x1F604;. Basta irmos em &apos;<em>File &gt; Preferences &gt; Keymap Extensions</em>&apos;<br>
+e veremos uma s&#xE9;rie de extens&#xF5;es que j&#xE1; possuem os atalhos configurados de acordo com o Keymap de outros editores.</p>
+<p><img src="https://i.imgur.com/r3XBIbg.png" alt="Keymap"></p>
+<hr>
+<h3 class="mume-header" id="emmets">Emmets</h3>
+
+<p>Agora que os atalhos est&#xE3;o certos, vamos aprender os &quot;Atalhos 2.0 - Ultra Turbo&quot;, os Emmets!<br>
+Os Emmets possuem a seguinte defini&#xE7;&#xE3;o:</p>
+<blockquote>
+<p>Emmet &#xE9; um conjunto de plug-ins para editores de texto que permitem a codifica&#xE7;&#xE3;o e edi&#xE7;&#xE3;o em HTML, XML, XSL e outros formatos de c&#xF3;digo estruturado de alta velocidade via assistente de conte&#xFA;do.</p>
+</blockquote>
+<p>Em outras palavras, eles permitem escrevermos um bloco de c&#xF3;digo de forma resumida, como por exemplo:</p>
+<p><em>Comando</em>: <strong>ul&gt;li*5</strong></p>
+<p><em>C&#xF3;digo</em>:</p>
+<pre data-role="codeBlock" data-info="{.html}" class="language- html"><code>&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p><em>Comando</em>: <strong>ul&gt;li.item$*5</strong></p>
+<p><em>C&#xF3;digo</em>:</p>
+<pre data-role="codeBlock" data-info="{.html}" class="language- html"><code>&lt;ul&gt;
+    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p><em>Comando</em>: <strong>nav&gt;ul&gt;li</strong></p>
+<p><em>C&#xF3;digo</em>:</p>
+<pre data-role="codeBlock" data-info="{.html}" class="language- html"><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre><p>Acha que isso &#xE9; tudo? O Emmet tem mais umas centenas de atalhos que fariam esse livro pesar mais de 1gb. Portanto, vamos deixar abaixo uma lista com a Cheat-Sheet oficial do Emmet para voc&#xEA; consultar sempre que for preciso &#x2764;&#xFE0F;.</p>
+<p><a href="https://docs.emmet.io/cheat-sheet/">Emmet Cheat Sheet</a></p>
+<hr>
+<h3 class="mume-header" id="snippets">Snippets</h3>
+
+<p>Agora vamos falar dos &quot;Atalhos 3.0 - Ultra Mega Turbo Blaster&quot;, os snippets. Basicamente eles s&#xE3;o acronomos/sigla/atalhos para um certo bloco de c&#xF3;digo espec&#xED;fico e o melhor de tudo: <strong>eles s&#xE3;o configur&#xE1;veis e voc&#xEA; pode fazer os seus &#x1F604;</strong>.</p>
+<p>Quem programa C# conhece o famoso atalho <em>CW</em> que nos gera <em>Console.WriteLine()</em> e os amantes de java nunca deixam o <em>sysout</em> de lado, para gerar o <em>System.out.println()</em>, tais atalhos s&#xE3;o os chamados Snippets!</p>
+<p>O VS Code por padr&#xE3;o j&#xE1; possui alguns, mas h&#xE1; <strong>v&#xE1;rios</strong> outros que podemos instalar e configurar. Primeiro temos que ir at&#xE9; o menu de Extens&#xF5;es e em seguida procurar por &quot;Snippets&quot; e pronto: Temos uma imensa lista de Snippets prontos para usarmos, das mais diversas linguagens.</p>
+<p><img src="https://i.imgur.com/jQTwqqA.png" alt="Snippets"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-250000-indo-rumo-ao-infinito">Produtividade 250000% - Indo rumo ao infinito</h2>
+
+<p>J&#xE1; estamos perto do infinito! Vamos aprender agora como controlar nossas vers&#xF5;es atrav&#xE9;s do GIT, receber recomenda&#xE7;&#xF5;es do pr&#xF3;prio VS Code e a maravilha dos Lints.</p>
+<hr>
+<h3 class="mume-header" id="controle-de-vers%C3%B5es-com-git">Controle de Vers&#xF5;es com GIT</h3>
+
+<p>Todo bom programador j&#xE1; ouviu falar de Git ou algum outro controlador de vers&#xF5;es. Segundo a defini&#xE7;&#xE3;o, Git &#xE9;:</p>
+<blockquote>
+<p>Git &#xE9; um sistema de controle de vers&#xF5;es distribu&#xED;do, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o hist&#xF3;rico de edi&#xE7;&#xF5;es de qualquer tipo de arquivo.</p>
+</blockquote>
+<p>Usar o Git no VS Code &#xE9; muito simples, basta selecionar a op&#xE7;&#xE3;o Git na Activity Bar como j&#xE1; ensinamos posteriormente. Temos ent&#xE3;o a seguinte imagem:</p>
+<p><img src="https://i.imgur.com/JpOMniA.png" alt="git1"></p>
+<ol>
+<li>Commit: Preparamos nossas mudan&#xE7;as para serem enviadas ao reposit&#xF3;rio (salvando completamente o estado atual do projeto);
+<ol>
+<li>PS: At&#xE9; executar o envio (PUSH) as altera&#xE7;&#xF5;es s&#xE3;o apenas locais.</li>
+</ol>
+</li>
+<li>Recarregar: For&#xE7;a atualizar tudo o foi mudado no projeto;</li>
+<li>Mais A&#xE7;&#xF5;es: A&#xE7;&#xF5;es extras do git, como por exemplo, enviar os Commits ao reposit&#xF3;rio e receber as ultimas mudan&#xE7;as dos seus colegas de equipe;</li>
+<li>Mudan&#xE7;as: Indica tudo que mudou no nosso projeto desde o ultimo Commit.</li>
+</ol>
+<p>Por sua vez, a aba de <em>&apos;Mais A&#xE7;&#xF5;es&apos;</em> possui as demais fun&#xE7;&#xF5;es do git que tamb&#xE9;m s&#xE3;o muito &#xFA;teis, como por exemplo:</p>
+<p><img src="https://i.imgur.com/uWMWwrP.png" alt="git2"></p>
+<ol>
+<li>Pull: Recebe as ultimas altera&#xE7;&#xF5;es do reposit&#xF3;rio</li>
+<li>Push: Envia suas ultimas altera&#xE7;&#xF5;es para o reposit&#xF3;rio</li>
+<li>Checkout To: Permite mudar a branch para qual vai enviar os commits
+<ol>
+<li>Branch: Para qual das &apos;<em>divis&#xF5;es</em>&apos; do reposit&#xF3;rio ser&#xE3;o enviadas as altera&#xE7;&#xF5;es, como por exemplo: vers&#xE3;o Release, Beta, Alpha, Dev</li>
+</ol>
+</li>
+<li>Stage All: Armazenas todas suas altera&#xE7;&#xF5;es para serem enviadas no pr&#xF3;ximo Commit</li>
+<li>Show Git Output: Mostra o Output (sa&#xED;da) do git, mostrando via CLI (linha de comando) tudo o que est&#xE1; acontecendo no git, como os commits enviados, os pulls recebidos e etc...</li>
+</ol>
+<hr>
+<h3 class="mume-header" id="lints">Lints</h3>
+
+<p>Lint segundo sua defini&#xE7;&#xE3;o pode ser entendido como:</p>
+<blockquote>
+<p>lint era o nome originalmente dado a um programa em particular que sinalizava algumas constru&#xE7;&#xF5;es suspeitas e n&#xE3;o port&#xE1;teis (provavelmente bugs) no c&#xF3;digo-fonte da linguagem C. O termo agora &#xE9; aplicado genericamente a ferramentas que sinalizam uso suspeito em software escrito em qualquer linguagem de computador.</p>
+</blockquote>
+<p>O que em outras palavras pode ser entendido como:</p>
+<blockquote>
+<p>O Lint facilita a sua codifica&#xE7;&#xE3;o uma vez que ele sinaliza partes erradas ou que ferem algum padr&#xE3;o de guideline da linguagem. Com isso, voc&#xEA; consegue saber qual a parte que precisa modificar para corrigir.<br>
+Os Lints tamb&#xE9;m podem colorir o seu c&#xF3;digo a fim de exaltar melhor o que &#xE9; cada parte e sua fun&#xE7;&#xE3;o (onde &#xE9; uma variavel, onde &#xE9; uma fun&#xE7;&#xE3;o e etc...)</p>
+</blockquote>
+<p>Para conseguir baixar v&#xE1;rios Lints prontos para as mais diversas linguagens, basta ir em Extens&#xF5;es e procurar por <em>Lint</em>.</p>
+<p><img src="https://i.imgur.com/ITMKKVD.png" alt="lints"></p>
+<hr>
+<h3 class="mume-header" id="recomenda%C3%A7%C3%B5es">Recomenda&#xE7;&#xF5;es</h3>
+
+<p>O VS Code tamb&#xE9;m possui uma s&#xE9;rie de recomenda&#xE7;&#xF5;es para os usu&#xE1;rios, que aumentam conforme voc&#xEA; vai utilizando o programa, ou seja, ele vai aprendendo seus gostos e o que voc&#xEA; mais usa e vai te dando recomenda&#xE7;&#xF5;es.</p>
+<p>Para acessar &#xE9; muito f&#xE1;cil basta ir at&#xE9; a aba de extens&#xF5;es e digitar &quot;<em>@recommended</em>&quot;.<br>
+Em seguida voc&#xCA; receber&#xE1; recomenda&#xE7;&#xF5;es tanto para o seu Workspace atual quanto para o seu uso rotineiro.</p>
+<p><img src="https://i.imgur.com/OmmJ6SD.png" alt="Recomenda&#xE7;&#xF5;es"></p>
+<hr>
+<h3 class="mume-header" id="formatadores-beautification">Formatadores (Beautification)</h3>
+
+<p>Os formatadores mais completos executam uma a&#xE7;&#xE3;o conhecida como Beautify, que baseia-se em pegar um c&#xF3;digo humanamente dif&#xED;cil de se ler e transforma em uma vers&#xE3;o bem mais bonita e f&#xE1;cil de ler e entender.</p>
+<p>Um exemplo disso s&#xE3;o os arquivos <em>Minificados</em>, que executam tecnicas para reduzir o peso dos arquivos, deixando tudo em apenas uma linha. Tal pr&#xE1;tica &#xE9; bem popular com c&#xF3;digos JS. As extens&#xF5;es formatadoras s&#xE3;o boas para exatamente isso, elas pegam aquele c&#xF3;digo totalmente dificil de ler e os tornam muito mais f&#xE1;cil de ler.</p>
+<p>Al&#xE9;m dos c&#xF3;digos em JS, tamb&#xE9;m s&#xE3;o bem &#xFA;teis para JSON, CSS e HTML</p>
+<p>Para encontr&#xE1;-las basta procurar por <em>Beautify</em> nas extens&#xF5;es.</p>
+<p><img src="https://i.imgur.com/RRZk3Mo.png" alt="beautify"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-1000000-t%C3%B3picos-avan%C3%A7ados-apenas-um-passo-para-o-infinito">Produtividade 1000000% - T&#xF3;picos Avan&#xE7;ados, apenas um passo para o infinito</h2>
+
+<p>Estamos chegando! A produtividade infinita est&#xE1; logo a frente! Vamos apenas aprender mais alguns conceitos e dicas &#x1F603;</p>
+<h3 class="mume-header" id="whitespaces">Whitespaces</h3>
+
+<p>Algo bem legal no VS, ainda mais para linguagens como Python que os blocos s&#xE3;o delimitados pela identa&#xE7;&#xE3;o, &#xE9; saber o quanto de espa&#xE7;os iniciais voc&#xEA; j&#xE1; deu em uma determinada linha, al&#xE9;m de saber se deu dois espa&#xE7;os seguidos sem querer.</p>
+<p>Para ativar isso podemos ir nas op&#xE7;&#xF5;es (<em>File &gt; Preferences &gt; Settings</em>) e procurar por <em>Render Whitespace</em>. Em seguida temos duas op&#xE7;&#xF5;es:</p>
+<ol>
+<li>All: Todos os espa&#xE7;os;</li>
+<li>Boundary: S&#xF3; os espa&#xE7;os nas bordas (inicio e fim) das linhas e espa&#xE7;os duplos.</li>
+</ol>
+<h3 class="mume-header" id="auto-save">Auto Save</h3>
+
+<p>Tamb&#xE9;m nas op&#xE7;&#xF5;es (<em>File &gt; Preferences &gt; Settings</em>) podemos ativar o Auto Save para salvar automaticamente nosso documento. Para isso basta procurar l&#xE1; por <em>AutoSave</em>, escolher a op&#xE7;&#xE3;o desejada afterDelay, onFocusChange ou onWindowChange e caso escolha a primeira, definir o temp o de Delay logo abaixo.</p>
+<p>Recomenda&#xE7;&#xE3;o: Ative com a op&#xE7;&#xE3;o <em>afterDelay</em> e escolha um tempo de delay de 100.</p>
+<h3 class="mume-header" id="copiar-e-colar-multiplas-linhas">Copiar e colar multiplas linhas</h3>
+
+<p>Ao clonar o cursor para v&#xE1;rias linhas (Segurando o Alt, como j&#xE1; ensinamos), voc&#xEA; tamb&#xE9;m pode copiar o conte&#xFA;do de cada linha de uma vez s&#xF3; e colar quando for necess&#xE1;rio.</p>
+<p><img src="https://i.imgur.com/EhfzPqo.gif" alt="copiar colar"></p>
+<h3 class="mume-header" id="customizar-barra-de-t%C3%ADtulo">Customizar barra de t&#xED;tulo</h3>
+
+<p>Na paleta de comandos procure por &apos;Open Settings (JSON)&apos; No JSON que ser&#xE1; aberto adicione:</p>
+<pre class="language-text">    &quot;window.titleBarStyle&quot;: &quot;custom&quot;,
+        &quot;workbench.colorCustomizations&quot;: {
+            &quot;titleBar.activeBackground&quot;: &quot;#FFFFFF&quot;,
+            &quot;titleBar.activeForeground&quot;:&quot;#FFFFFF&quot;,
+        }
+</pre>
+<p>Tal t&#xE9;cnica &#xE9; bem &#xFA;til para diferenciar v&#xE1;rias janelas do VS Code e saber do que cada. uma se trata.</p>
+<p><img src="https://i.imgur.com/ZAL0ph0.png" alt="titulocolorido"></p>
+<h3 class="mume-header" id="selecionar-apenas-uma-%C3%A1rea-espec%C3%ADfica">Selecionar apenas uma &#xE1;rea espec&#xED;fica</h3>
+
+<p>Basta apertar o bot&#xE3;o do meio (apertar a bolinha) e arrastar mouse na &#xE1;rea desejada.</p>
+<p><img src="https://i.imgur.com/1hCxQhZ.png" alt="loremipsum"></p>
+<h3 class="mume-header" id="fira-code-com-font-ligatures">Fira Code com Font Ligatures</h3>
+
+<p>Falando sobre fontes, uma das mais utilizadas no VS Code &#xE9; a Fira Code, uma fonte pr&#xF3;pria para desenvolvedores, contando com alguns recursos como ligaduras tipogr&#xE1;ficas (que permitem a jun&#xE7;&#xE3;o de dois ou mais caracteres em um s&#xF3;) e s&#xED;mbolos feitos pensando no dia a dia de um programador, al&#xE9;m do design de fontes ser feito exatamente para n&#xE3;o confundir o desenvolvedor como nos casos de &apos;0 e O&apos;, &apos;iI lL&apos;.</p>
+<p>Para utilizar a Fira Code basta baixar do reposit&#xF3;rio oficial <a href="https://github.com/tonsky/FiraCode">aqui</a> e instalar no seu sistema operacional.</p>
+<p>Em seguida, vamos em Op&#xE7;&#xF5;es no VS Code (<em>File &gt; Preferences &gt; Settings</em>) e procuramos por <em>Font</em>, configurando as propriedades <em>Font Family</em> e <em>Font Ligatures</em> como na imagem abaixo:</p>
+<p><img src="https://i.imgur.com/BSicARd.png" alt="FiraCode"></p>
+<h3 class="mume-header" id="breadcrumbs-auxiliares-de-navega%C3%A7%C3%A3o">Breadcrumbs (Auxiliares de navega&#xE7;&#xE3;o)</h3>
+
+<p>Atrav&#xE9;s dos Breadcrumbs fica bem f&#xE1;cil saber onde voc&#xEA; est&#xE1; na workspace, em qual classe, m&#xE9;todo ou at&#xE9; mesmo vari&#xE1;vel est&#xE1; trabalhando, tudo isso pelo caminho de navega&#xE7;&#xE3;o que fica na parte superior do VS Code.</p>
+<p><img src="https://i.imgur.com/0w3IUh7.gif" alt="navegacao"></p>
+<h3 class="mume-header" id="linhas-vazias">Linhas Vazias</h3>
+
+<p>Para excluir todas as linhas em branco &#xE9; muito simples, basta apertar <em>Ctrl+H</em> e voc&#xEA; ver&#xE1; a op&#xE7;&#xE3;o de Search &amp; Replace (Buscar e Substituir), ativar a buscar por Regex <em>(Alt + R</em> no campo de busca) e ent&#xE3;o basta buscar por &quot;<em>\n\s*\n</em>&quot; e pedir para substituir por apenas &quot;<em>\n</em>&quot;, em seguida apertando no bot&#xE3;o Substituir Todos (<em>Ctrl + Alt + Enter</em>).</p>
+<p><img src="https://i.imgur.com/thk10GN.png" alt="regexreplace"></p>
+<h3 class="mume-header" id="delimitar-sele%C3%A7%C3%A3o">Delimitar Sele&#xE7;&#xE3;o</h3>
+
+<p>Eu aposto que v&#xE1;rias vezes voc&#xEA; j&#xE1; tentou delimitar alguma sele&#xE7;&#xE3;o com aspas, parenteses, barras e afins, mas sempre precisou inserir uma antes e uma depois, para n&#xE3;o substituir o texto, certo?</p>
+<p>Com o VS Code basta voc&#xEA; selecionar as palavras e apetar o delimitador de inicio, como <em>[</em>, <em>(</em>, <em>&apos;</em>, <em>&quot;</em> e automaticamente o CS Code j&#xE1; ir&#xE1; colocar o respectivo delimitador no inicio e fim da sele&#xE7;&#xE3;o.</p>
+<p><img src="https://i.imgur.com/Fwgct7l.gif" alt="delimitador"></p>
+<h3 class="mume-header" id="testes-unit%C3%A1rios">Testes Unit&#xE1;rios</h3>
+
+<p>Os testes unit&#xE1;rios ajudam muito na hora de testar seu c&#xF3;digo e ver se n&#xE3;o restou nenhum tipo de erro ou problema que passou nos testes rotineiros (compilar, tentar usar e ver se pegou). Por sorte, o VS Code tem muitas extens&#xF5;es para testes unit&#xE1;rios, em v&#xE1;rias linguagens.</p>
+<p>Para instalar essas extens&#xF5;es basta ir na sess&#xE3;o de Extens&#xF5;es na Activity Bar e procurar por <em>Unit Test</em>.</p>
+<p><img src="https://i.imgur.com/vQtmlQY.png" alt="Unit Test"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-alcan%C3%A7ando-o-infinito">Produtividade &#x221E; - Alcan&#xE7;ando o Infinito</h2>
+
+<p>Pronto! Basta aprendermos a usar as extens&#xF5;es de forma eficaz e iremos alcan&#xE7;ar a sonhada produtividade infinita &#x1F604;!</p>
+<h3 class="mume-header" id="extens%C3%B5es-gerais">Extens&#xF5;es - Gerais</h3>
+
+<h4 class="mume-header" id="code-runnerhttpsmarketplacevisualstudiocomitemsitemnameformulahendrycode-runner"><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner">Code Runner</a></h4>
+
+<p>Permite rodar c&#xF3;digos direto no VS Code nas seguintes linguagens:</p>
+<p>C, C++, Java, JavaScript, PHP, Python, Perl, Perl 6, Ruby, Go, Lua, Groovy, PowerShell, BAT/CMD, BASH/SH, F# Script, F# (.NET Core), C# Script, C# (.NET Core), VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml Script, R, AppleScript, Elixir, Visual Basic .NET, Clojure, Haxe, Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Free Pascal, Haskell, Nim, D, Lisp, Kit, e comandos customizados</p>
+<p><em>Comando:</em> Aperte <strong>Ctrl + Alt + N</strong> para iniciar a aplica&#xE7;&#xE3;o</p>
+<p><img src="https://github.com/formulahendry/vscode-code-runner/raw/master/images/usage.gif" alt="Code Runner"></p>
+<h4 class="mume-header" id="live-serverhttpsmarketplacevisualstudiocomitemsitemnameritwickdeyliveserver"><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a></h4>
+
+<p>Abre um servidor local para desenvolvimento web, fazendo seu c&#xF3;digo abrir no navegador pelo pr&#xF3;prio VS Code.</p>
+<p><img src="https://github.com/ritwickdey/vscode-live-server/raw/master/images/Screenshot/vscode-live-server-statusbar-3.jpg" alt="live server"><br>
+<img src="https://i.imgur.com/5CTYZkj.gif" alt="live server"></p>
+<h4 class="mume-header" id="debugger-for-chromehttpsmarketplacevisualstudiocomitemdetailsitemnamemsjsdiagdebugger-for-chrome"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=msjsdiag.debugger-for-chrome">Debugger for chrome</a></h4>
+
+<p>Permite executar a depura&#xE7;&#xE3;o de c&#xF3;digo direto no c&#xF3;digo, &#xF3;timo para debugar aplica&#xE7;&#xF5;es Web e c&#xF3;digos JS</p>
+<p><img src="https://github.com/Microsoft/vscode-chrome-debug/blob/master/images/demo.gif?raw=true" alt="Debugger for Chrome"></p>
+<h4 class="mume-header" id="sftphttpsmarketplacevisualstudiocomitemdetailsitemnameliximomosftp"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=liximomo.sftp">SFTP</a></h4>
+
+<p>Extens&#xE3;o super poderosa para SFTP e FTP, permitindo editar arquivos direto o servidor, editar localmente e subir para o servidor, fazer download, backup, sincronizar, checar as diferen&#xE7;as e muito mais.</p>
+<p><img src="https://raw.githubusercontent.com/liximomo/vscode-sftp/master/assets/showcase/remote-explorer.png" alt="SFTP"></p>
+<h4 class="mume-header" id="dockerhttpsmarketplacevisualstudiocomitemdetailsitemnamepeterjausovecvscode-docker"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=PeterJausovec.vscode-docker">Docker</a></h4>
+
+<p>Extens&#xE3;o que permite o suporte ao Docker no VS Code.</p>
+<p><img src="https://github.com/microsoft/vscode-docker/raw/master/images/generateFiles.gif" alt="Docker"><br>
+<img src="https://github.com/microsoft/vscode-docker/raw/master/images/intelliSense.gif" alt="Docker"></p>
+<h4 class="mume-header" id="regex-previewerhttpsmarketplacevisualstudiocomitemdetailsitemnamechrmartiregex"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=chrmarti.regex">Regex Previewer</a></h4>
+
+<p>Permite verificar se o nosso Regex est&#xE1; pegando ao tentar encontrar padr&#xF5;es em um arquivo com regex com outro na tela ao lado contendo o texto a ser testado.</p>
+<p><em>Comando:</em> Aperte <strong>Ctrl+Alt+M</strong> para inicar o Preview!</p>
+<p><img src="https://github.com/chrmarti/vscode-regex/raw/master/images/in_action.gif" alt="Regex Previewer"></p>
+<h4 class="mume-header" id="azure-toolshttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodevscode-node-azure-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.vscode-node-azure-pack">Azure Tools</a></h4>
+
+<p>Extens&#xE3;o que d&#xE1; suporte as ferramentas Azure, podendo trabalhar com tudo o que &#xE9; oferecido pela Azure.</p>
+<p><img src="https://github.com/microsoft/vscode-node-azure-pack/raw/master/explorer.png" alt="Azure Tools"><br>
+<img src="https://github.com/microsoft/vscode-node-azure-pack/raw/master/commandpalette.png" alt="AzureTools"></p>
+<h4 class="mume-header" id="visual-studio-intellicodehttpsmarketplacevisualstudiocomitemdetailsitemnamevisualstudioexptteamvscodeintellicode"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=VisualStudioExptTeam.vscodeintellicode">Visual Studio IntelliCode</a></h4>
+
+<p>Ativa o novo Visual Studio IntelliCode (Criado para o VS 2019) para diversas linguagens, como C#, C++, XAML, Pytho, JavaScript e TypeScript.</p>
+<p><img src="https://go.microsoft.com/fwlink/?linkid=2006041" alt="IntelliCode"></p>
+<h4 class="mume-header" id="spell-checkerhttpsmarketplacevisualstudiocomitemdetailsitemnamestreetsidesoftwarecode-spell-checker"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=streetsidesoftware.code-spell-checker">Spell Checker</a></h4>
+
+<p>Checa a gram&#xE1;tica do c&#xF3;gido, dizendo ao programador quando ele errou na escrita (possui suporte para portugu&#xEA;s).</p>
+<p><img src="https://raw.githubusercontent.com/Jason-Rev/vscode-spell-checker/master/client/images/example.gif" alt="Spell Checker"></p>
+<h4 class="mume-header" id="gitlenshttpsmarketplacevisualstudiocomitemdetailsitemnameeamodiogitlens"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=eamodio.gitlens">GitLens</a></h4>
+
+<p>Extens&#xE3;o para o Git que ajuda muito, mostrando muitas outras informa&#xE7;&#xF5;es, como quem editou cada arquivo/m&#xE9;todo/vari&#xE1;vel/linha por &#xFA;ltimo e quando foi isso. Tamb&#xE9;m permite executar um fluxo completo do git (pull, stage, commit, push, sync, checkout e etc...).</p>
+<p><img src="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/docs/gitlens-preview.gif" alt="GitLens"></p>
+<h4 class="mume-header" id="indent-rainbowhttpsmarketplacevisualstudiocomitemdetailsitemnameoderwatindent-rainbow"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=oderwat.indent-rainbow">Indent Rainbow</a></h4>
+
+<p>Mostra as identa&#xE7;&#xF5;es (espa&#xE7;os) com cores diferentes em um gradiente, para mostrar o qu&#xE3;o identado est&#xE1;.</p>
+<p><img src="https://raw.githubusercontent.com/oderwat/vscode-indent-rainbow/master/assets/example.png" alt="Indent Rainbow"></p>
+<h4 class="mume-header" id="beautifyhttpsmarketplacevisualstudiocomitemdetailsitemnamehookyqrbeautify"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=HookyQR.beautify">Beautify</a></h4>
+
+<p>Como j&#xE1; foi dito anteriormente, fun&#xE7;&#xF5;es com tag/nome <em>Beautify</em> servem para deixar seu c&#xF3;digo mais bonito, estruturado e organizado.</p>
+<p>No VS Code a principal extens&#xE3;o para isso chama exatamente <em>Beautify</em> e funciona com JSON, HTML, SASS e CSS. Basta apertar <em>F1</em> e digitar &quot;Beautify file&quot;.</p>
+<h4 class="mume-header" id="kanbanhttpsmarketplacevisualstudiocomitemdetailsitemnamemkloubertvscode-kanbanhow-to-execute-"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mkloubert.vscode-kanban#how-to-execute-">Kanban</a></h4>
+
+<p>Uma extens&#xE3;o &#xF3;tima que ir&#xE1; aprimorar e muito sua produtividade no VS Code atrav&#xE9;s dos quadros de Kanban.</p>
+<p><em>Comando:</em> Aperta <em>F1</em> e execute <strong>Kanban: Open Board</strong> para abrir o quadro Kanban.</p>
+<p><img src="https://raw.githubusercontent.com/mkloubert/vscode-kanban/master/img/demo1.gif" alt="Kanban"></p>
+<h4 class="mume-header" id="todo-treehttpsmarketplacevisualstudiocomitemdetailsitemnamegruntfugglytodo-tree"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=Gruntfuggly.todo-tree">Todo Tree</a></h4>
+
+<p>Permite marcar e destacar coment&#xE1;rios com tags como TODO, FIXME, e afins.</p>
+<p><img src="https://raw.githubusercontent.com/Gruntfuggly/todo-tree/master/resources/screenshot.png" alt="Todo Tree"></p>
+<h4 class="mume-header" id="auto-close-taghttpsmarketplacevisualstudiocomitemdetailsitemnameformulahendryauto-close-tag"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=formulahendry.auto-close-tag">Auto Close Tag</a></h4>
+
+<p>Extens&#xE3;o t&#xE3;o popular que a partir do VS Code 1.6 ela foi implementada de forma nativa para HTML, por&#xE9;m, ainda &#xE9; muito &#xFA;til para XML, PHP, Vue, JavaScript, TypeScript, JSX, TSX e muito mais.</p>
+<p><img src="https://github.com/formulahendry/vscode-auto-close-tag/raw/master/images/usage.gif" alt="Auto Close Tag"></p>
+<h4 class="mume-header" id="bracket-pair-colorizerhttpsmarketplacevisualstudiocomitemdetailsitemnamecoenraadsbracket-pair-colorizer"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</a></h4>
+
+<p>Pinta par&#xEA;nteses correspondentes da mesma cor e os difere de outros, para voc&#xEA; sempre saber onde come&#xE7;a e termina cada um dos blocos delimitados por par&#xEA;nteses.</p>
+<p><img src="https://github.com/CoenraadS/BracketPair/raw/master/images/example.png" alt="Bracket Pair Colorizer"></p>
+<h4 class="mume-header" id="better-commentshttpsmarketplacevisualstudiocomitemdetailsitemnameaaron-bondbetter-comments"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=aaron-bond.better-comments">Better Comments</a></h4>
+
+<p>Adiciona uma s&#xE9;rie de tags para coment&#xE1;rios, como alertas, TODO, destaques, parametros e etc...</p>
+<p><img src="https://github.com/aaron-bond/better-comments/raw/master/images/better-comments.PNG" alt="Better Comments"></p>
+<h4 class="mume-header" id="minifyhttpsmarketplacevisualstudiocomitemdetailsitemnameolbackes6-css-minify"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=olback.es6-css-minify">Minify</a></h4>
+
+<p>Minificador autom&#xE1;tico para c&#xF3;digos JS, CSS e HTML.</p>
+<h4 class="mume-header" id="bookmarkhttpsmarketplacevisualstudiocomitemdetailsitemnamealefragnanibookmarks"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=alefragnani.Bookmarks">Bookmark</a></h4>
+
+<p>Permite salvar linhas como favoritas e pular para elas facilmente.</p>
+<p><img src="https://github.com/alefragnani/vscode-bookmarks/raw/master/images/bookmarks-toggle.png" alt="Bookmark"><br>
+<img src="https://github.com/alefragnani/vscode-bookmarks/raw/master/images/bookmarks-list-from-all-files.gif" alt="Bookmark"></p>
+<h4 class="mume-header" id="mark-jumphttpsmarketplacevisualstudiocomitemdetailsitemnamespywheremark-jump"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=spywhere.mark-jump">Mark Jump</a></h4>
+
+<p>Alternativa ao BookMark, onde o programdor pode, atrav&#xE9;s de um coment&#xE1;rio, marcar uma linha para ser rapidamente visitada novamente no futuro.</p>
+<p><img src="https://github.com/spywhere/vscode-mark-jump/raw/master/images/screenshot.png" alt="Mark Jump"></p>
+<h4 class="mume-header" id="gihttpsmarketplacevisualstudiocomitemdetailsitemnamerubbersheepgi"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=rubbersheep.gi">Gi</a></h4>
+
+<p>Permite gerara arquivos .gitignore de forma simples e f&#xE1;cil</p>
+<p><img src="https://github.com/hasit/vscode-gi/raw/master/assets/gi.gif" alt="Gi"></p>
+<h4 class="mume-header" id="settings-synchttpsmarketplacevisualstudiocomitemdetailsitemnameshancode-settings-sync"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=Shan.code-settings-sync">Settings Sync</a></h4>
+
+<p>Permite sincronizar suas configura&#xE7;&#xF5;es com outros computadores atrav&#xE9;s de um reposit&#xF3;rio GitHub.</p>
+<p><img src="https://media.giphy.com/media/xT9IglKxSqs2Wdwq2c/source.gif" alt="Settings Sync"></p>
+<h4 class="mume-header" id="wakatimehttpsmarketplacevisualstudiocomitemdetailsitemnamewakatimevscode-wakatime"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=WakaTime.vscode-wakatime">WakaTime</a></h4>
+
+<p>Extens&#xE3;o muito &#xFA;til para medir o tempo em que voc&#xEA; passou codificando algum projeto, tanto para medir melhor o empenho gasto para cobrar pelo freelance quanto para avaliar sua melhora em produtividade (que espero j&#xE1; estar <strong>infinita</strong>).</p>
+<p><img src="https://github.com/wakatime/vscode-wakatime/raw/master/images/Screen-Shot-2016-03-21.png" alt="WakaTime"></p>
+<h4 class="mume-header" id="rest-clienthttpsmarketplacevisualstudiocomitemdetailsitemnamehumaorest-client"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=humao.rest-client">REST Client</a></h4>
+
+<p>Permite executar requisi&#xE7;&#xF5;es HTTP (GET/POST) diretamente do VS Code.</p>
+<p><img src="https://github.com/Huachao/vscode-restclient/raw/master/images/usage.gif" alt="Rest Client"></p>
+<h4 class="mume-header" id="path-intellisensehttpsmarketplacevisualstudiocomitemdetailsitemnamechristian-kohlerpath-intellisense"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=christian-kohler.path-intellisense">Path Intellisense</a></h4>
+
+<p>Permite gerar um autocompletar para nome de arquivos e diret&#xF3;rios de acordo com o arquivo atual em rela&#xE7;&#xE3;o a hierarquia de diret&#xF3;rios do seu projeto.</p>
+<p><img src="http://i.giphy.com/iaHeUiDeTUZuo.gif" alt="PathIntellisense"></p>
+<h4 class="mume-header" id="partial-diffhttpsmarketplacevisualstudiocomitemdetailsitemnameryu1knpartial-diff"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ryu1kn.partial-diff">Partial Diff</a></h4>
+
+<p>Permite checar a similaridade de duas sele&#xE7;&#xF5;es, mostrando onde s&#xE3;o iguais e onde s&#xE3;o diferentes.</p>
+<p><img src="https://raw.githubusercontent.com/ryu1kn/vscode-partial-diff/master/images/public.gif" alt="Partial Diff"></p>
+<h4 class="mume-header" id="tinypnghttpsmarketplacevisualstudiocomitemdetailsitemnamejackpanyjtinypng"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=jackpanyj.tinypng">TinyPNG</a></h4>
+
+<p>Extens&#xE3;o super &#xFA;til na hora de comprimir imagens e otimizar o peso do seu projeto. Tudo isso de forma simples e pr&#xE1;tica.</p>
+<p><img src="https://github.com/jackPanyj/vscode_tinypng/raw/master/images/many.png" alt="TinyPNG"><br>
+<img src="https://github.com/jackPanyj/vscode_tinypng/raw/master/images/one.png" alt="TinyPNG"></p>
+<h4 class="mume-header" id="polacodehttpsmarketplacevisualstudiocomitemdetailsitemnamepnppolacode"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=pnp.polacode">Polacode</a></h4>
+
+<p>Permite tirar printscreens elegantes em Polaroid do seu c&#xF3;digo.</p>
+<p><img src="https://github.com/octref/polacode/raw/master/demo/usage.gif" alt="PolaCode"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-markdown">Extens&#xF5;es - Markdown</h3>
+
+<h4 class="mume-header" id="markdown-preview-enhancedhttpsmarketplacevisualstudiocomitemdetailsitemnameshd101wyymarkdown-preview-enhanced"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=shd101wyy.markdown-preview-enhanced">Markdown Preview Enhanced</a></h4>
+
+<p>Gera uma tela de Preview bem melhor do que a existente por padr&#xE3;o no VS Code, cheia de fun&#xE7;&#xF5;es como at&#xE9; mesmo gerar um e-book atrav&#xE9;s de um Markdown.</p>
+<p>PS: Essa extens&#xE3;o foi usada para a cria&#xE7;&#xE3;o deste ebook.</p>
+<p><img src="https://user-images.githubusercontent.com/1908863/28495106-30b3b15e-6f09-11e7-8eb6-ca4ca001ab15.png" alt="Markdown Preview Enhanced"></p>
+<h4 class="mume-header" id="markdown-all-in-onehttpsmarketplacevisualstudiocomitemdetailsitemnameyzhangmarkdown-all-in-one"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></h4>
+
+<p>Uma extens&#xE3;o completa para se trabalhar com Markdown, cheia de atalhos e funcionalidades muito &#xFA;teis, como a cria&#xE7;&#xE3;o de sum&#xE1;rios.</p>
+<p><img src="https://github.com/yzhang-gh/vscode-markdown/raw/master/images/gifs/multi-ctrl-b-light.gif" alt="Markdown All in One"><br>
+<img src="https://github.com/yzhang-gh/vscode-markdown/raw/master/images/gifs/keybinding-tasklist.gif" alt="Markdown All in One"><br>
+<img src="https://github.com/yzhang-gh/vscode-markdown/raw/master/images/toc.png" alt="Markdown All in One"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-json">Extens&#xF5;es - JSON</h3>
+
+<h4 class="mume-header" id="paste-json-as-codehttpsmarketplacevisualstudiocomitemdetailsitemnamequicktypequicktype"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=quicktype.quicktype">Paste JSON as Code</a></h4>
+
+<p>Permite transcrever um c&#xF3;digo em JSON para v&#xE1;rias outras linguagens, tais como:<br>
+TypeScript, Python, Go, Ruby, C#, Java, Swift, Rust, Kotlin, C++, Flow, Objective-C, JavaScript e Elm.</p>
+<p><img src="https://raw.githubusercontent.com/quicktype/quicktype-vscode/master/media/demo-interactive.gif" alt="Paste Json As Code"><br>
+<img src="https://raw.githubusercontent.com/quicktype/quicktype-vscode/master/media/demo.gif" alt="Paste Json As Code"></p>
+<h4 class="mume-header" id="prettify-jsonhttpsmarketplacevisualstudiocomitemdetailsitemnamemohsen1prettify-json"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mohsen1.prettify-json">Prettify JSON</a></h4>
+
+<p>Permite visualizar c&#xF3;digos em JSON de uma forma mais organizada, estruturada e bonita.</p>
+<p><img src="https://raw.githubusercontent.com/mohsen1/vscode-prettify-json/master/screenshot.gif" alt="Prettify JSON"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-python">Extens&#xF5;es - Python</h3>
+
+<h4 class="mume-header" id="pythonhttpsmarketplacevisualstudiocomitemdetailsitemnamems-pythonpython"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-python.python">Python</a></h4>
+
+<p>Extens&#xE3;o <em>tudo em um</em> para Python, contendo Linting, Depura&#xE7;&#xE3;o, Intellisense, Formata&#xE7;&#xE3;o de C&#xF3;digo, Refatora&#xE7;&#xE3;o, Snippets, Jupyter Notebook e muito mais...</p>
+<p><img src="https://raw.githubusercontent.com/microsoft/vscode-python/master/images/interactive.gif" alt="Python"><br>
+<img src="https://raw.githubusercontent.com/microsoft/vscode-python/master/images/debugDemo.gif" alt="Python"><br>
+<img src="https://raw.githubusercontent.com/microsoft/vscode-python/master/images/unittest.gif" alt="Python"></p>
+<h4 class="mume-header" id="python-previewhttpsmarketplacevisualstudiocomitemdetailsitemnamedonglipython-preview"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=dongli.python-preview">Python Preview</a></h4>
+
+<p>Permite visualizar uma pr&#xE9;via do c&#xF3;digo em Python codificado por voc&#xEA; de forma bem detalhada, muito eficaz para depura&#xE7;&#xE3;o!</p>
+<p><img src="https://raw.githubusercontent.com/dongli0x00/python-preview/master/images/previewDemo.gif" alt="Python Preview"><br>
+<img src="https://raw.githubusercontent.com/dongli0x00/python-preview/master/images/settingDemo.gif" alt="Python Preview"></p>
+<h4 class="mume-header" id="anaconda-extension-packhttpsmarketplacevisualstudiocomitemsitemnamems-pythonanaconda-extension-pack"><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.anaconda-extension-pack">Anaconda Extension Pack</a></h4>
+
+<p>Extens&#xE3;o que permite o funcionamento da Anaconda no VS Code.</p>
+<p><img src="https://raw.githubusercontent.com/microsoft/vscode-python/master/images/general.gif" alt="Anaconda"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-java">Extens&#xF5;es - Java</h3>
+
+<h4 class="mume-header" id="language-support-for-javatm-by-red-hathttpsmarketplacevisualstudiocomitemdetailsitemnameredhatjava"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=redhat.java">Language Support for Java(TM) by Red Hat</a></h4>
+
+<p>Habilita o suporte ao Java no VS Code com muitas fun&#xE7;&#xF5;es como Linting, Intellisense, Formata&#xE7;&#xE3;o, Refatora&#xE7;&#xE3;o, Marven/Gradle e muito mais.</p>
+<p><img src="https://raw.githubusercontent.com/redhat-developer/vscode-java/master/images/vscode-java.0.0.1.gif" alt="Language Suport for Java"></p>
+<h4 class="mume-header" id="debugger-for-javahttpsmarketplacevisualstudiocomitemdetailsitemnamevscjavavscode-java-debug"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=vscjava.vscode-java-debug">Debugger for Java</a></h4>
+
+<p>Um depurador de c&#xF3;digo para Java bem completo e eficaz.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-c-e-dotnetcore">Extens&#xF5;es - C# e DotNetCore</h3>
+
+<h4 class="mume-header" id="chttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodecsharp"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.csharp">C#</a></h4>
+
+<p>Extens&#xE3;o oficial do C#, feita pela Microsoft com tudo o que precisa para funcionar o C# no VS Code.</p>
+<h4 class="mume-header" id="c-extensionshttpsmarketplacevisualstudiocomitemdetailsitemnamejchannoncsharpextensions"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=jchannon.csharpextensions">C# Extensions</a></h4>
+
+<p>Poeticamente, &#xE9; uma extens&#xE3;o para a extens&#xE3;o C# da Microsoft, com varios novos recursos e facilidades na hora de programar.</p>
+<p><img src="https://github.com/jchannon/csharpextensions/raw/master/featureimages/newclass.gif" alt="C# Extensions"><br>
+<img src="https://github.com/jchannon/csharpextensions/raw/master/featureimages/fieldfromctor.gif" alt="C# Extensions"><br>
+<img src="https://github.com/jchannon/csharpextensions/raw/master/featureimages/ctorfromprop.gif" alt="C# Extensions"></p>
+<h4 class="mume-header" id="c-xml-documentation-commentshttpsmarketplacevisualstudiocomitemdetailsitemnamek-katodocomment"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=k--kato.docomment">C# XML Documentation Comments</a></h4>
+
+<p>Permite criar documenta&#xE7;&#xF5;es XML a partir da digita&#xE7;&#xE3;o de <em>///</em>, como acontece no Visual Studio.</p>
+<p><img src="https://github.com/kasecato/vscode-docomment/raw/master/images/docomment.gif" alt="C# XML Documentation Comments"></p>
+<h4 class="mume-header" id="awesome-dotnetcore-packhttpsmarketplacevisualstudiocomitemdetailsitemnamesalbertawesome-dotnetcore-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=salbert.awesome-dotnetcore-pack">Awesome DotNetCore Pack</a></h4>
+
+<p>Um pacore para C# e DotNetCore contendo v&#xE1;rias outras extens&#xF5;es menores, se tornando uma extens&#xE3;o <em>tudo em um</em>.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-cc">Extens&#xF5;es - C/C++</h3>
+
+<h4 class="mume-header" id="cchttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodecpptools"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.cpptools">C/C++</a></h4>
+
+<p>Extens&#xE3;o oficial da Microsoft para habilitar suporte ao C++ no VS Code.</p>
+<p><img src="https://code.visualstudio.com/assets/docs/languages/cpp/filesearch.png" alt="C++"></p>
+<h4 class="mume-header" id="cc-extension-packhttpsmarketplacevisualstudiocomitemdetailsitemnameleojhonsongccpp-extension-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=LeoJhonSong.ccpp-extension-pack">C/C++ Extension Pack</a></h4>
+
+<p>Pacote repleto de extens&#xF5;es para o C/C++, como melhorias ao Clang, Autocompletar e Snippets.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-banco-de-dados">Extens&#xF5;es - Banco de Dados</h3>
+
+<h4 class="mume-header" id="sql-server-mssqlhttpsmarketplacevisualstudiocomitemdetailsitemnamems-mssqlmssql"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-mssql.mssql">SQL Server (Mssql)</a></h4>
+
+<p>Desenvolva com Microsoft SQL Server, Azure SQL Database e SQL Data Warehouse direto do seu VS Code.</p>
+<p><img src="https://github.com/Microsoft/vscode-mssql/raw/master/images/mssql-demo.gif" alt="SQL Server"></p>
+<h4 class="mume-header" id="sqltoolshttpsmarketplacevisualstudiocomitemdetailsitemnamemtxrsqltools"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mtxr.sqltools">SQLTools</a></h4>
+
+<p>Extens&#xE3;o para SQL cheio de ferramentas, &#xE1;rvore de visualiza&#xE7;&#xE3;o da tabela, possibilidade de rodar as <em>querys</em> de forma simples, intellisense, hist&#xF3;rico, exportar como JSON e muito mais.</p>
+<p><img src="https://raw.githubusercontent.com/mtxr/vscode-sqltools/master/static/autocomplete.png" alt="SQLTools"><br>
+<img src="https://raw.githubusercontent.com/mtxr/vscode-sqltools/master/static/add_new_connection_ui.gif" alt="SQLTools"><br>
+<img src="https://raw.githubusercontent.com/mtxr/vscode-sqltools/master/static/export-results.gif" alt="SQLTools"></p>
+<h4 class="mume-header" id="sqlitehttpsmarketplacevisualstudiocomitemdetailsitemnamealexcvzzvscode-sqlite"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=alexcvzz.vscode-sqlite">SQLite</a></h4>
+
+<p>Extens&#xE3;o que adiciona suporte ao SQLite ao VS Code.</p>
+<p><img src="https://raw.githubusercontent.com/AlexCovizzi/vscode-sqlite/master/static/sqlite_workflow_1.gif" alt="SQLite"></p>
+<h4 class="mume-header" id="mongo-runnerhttpsmarketplacevisualstudiocomitemdetailsitemnamejoeyyizhaomongo-runner"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=JoeyYiZhao.mongo-runner">Mongo Runner</a></h4>
+
+<p>Por fim, uma extens&#xE3;o aos que preferem NoSQL, o Mongo Runner traz ao VS Code tudo que &#xE9; preciso para se trabalhar com o banco de dados MongoDB.</p>
+<p><img src="https://raw.githubusercontent.com/zhaoyi0113/mongodb-runner/master/images/shard-ss.png" alt="Mongo Runner"><br>
+<img src="https://raw.githubusercontent.com/zhaoyi0113/mongodb-runner/master/images/mr-editor.png" alt="Mongo Runner"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-html">Extens&#xF5;es - HTML</h3>
+
+<h4 class="mume-header" id="html-snippetshttpsmarketplacevisualstudiocomitemdetailsitemnameabusaidmhtml-snippets"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=abusaidm.html-snippets">HTML Snippets</a></h4>
+
+<p>Uma das extens&#xF5;es mais &#xFA;teis para se trabalhar com HTML, ela gera v&#xE1;rios snippets para os mais diversos casos.</p>
+<p><img src="https://i.imgur.com/VOhBvHb.gif" alt="HTML Snippets"></p>
+<h4 class="mume-header" id="html-boilerplatehttpsmarketplacevisualstudiocomitemdetailsitemnamesidtheslothhtml5-boilerplate"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=sidthesloth.html5-boilerplate">HTML Boilerplate</a></h4>
+
+<p>Essa extens&#xE3;o prov&#xEA; o suporte ao template HTML Boilerplate atrav&#xE9;s de snippets.</p>
+<p><img src="https://s19.postimg.cc/3mig98d5v/html_boilerplate_1_0_3.gif" alt="HTML Boilerplate"></p>
+<h4 class="mume-header" id="sorting-html-and-jade-attributeshttpsmarketplacevisualstudiocomitemdetailsitemnamemrmlncvscode-attrs-sorter"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mrmlnc.vscode-attrs-sorter">Sorting HTML and Jade attributes</a></h4>
+
+<p>Ordene seus atributos da forma correta em HTML.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/7034281/13495536/5f4bf152-e15c-11e5-8031-62ca1a5709f2.gif" alt="Sorting HTML attributes"></p>
+<h4 class="mume-header" id="auto-rename-taghttpsmarketplacevisualstudiocomitemdetailsitemnameformulahendryauto-rename-tag"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=formulahendry.auto-rename-tag">Auto Rename Tag</a></h4>
+
+<p>Renomeie todas suas tags de forma simples, r&#xE1;pida e f&#xE1;cil.</p>
+<p><img src="https://github.com/formulahendry/vscode-auto-rename-tag/raw/master/images/usage.gif" alt="Auto Rename Tag"></p>
+<h4 class="mume-header" id="dummy-text-generatorhttpsmarketplacevisualstudiocomitemdetailsitemnamegurayyarardummytextgenerator"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=gurayyarar.dummytextgenerator">Dummy Text Generator</a></h4>
+
+<p>Gere textos aleat&#xF3;rios (tais como o Lorem Ipsum) de forma f&#xE1;cil e pr&#xE1;tica para testar seus c&#xF3;digo.</p>
+<p><img src="https://raw.githubusercontent.com/gurayyarar/DummyTextGenerator/master/images/docs/right-click.jpg" alt="Dummy Text Generator"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-csssass">Extens&#xF5;es - CSS/SASS</h3>
+
+<h4 class="mume-header" id="css-peekhttpsmarketplacevisualstudiocomitemdetailsitemnamepranaygpvscode-css-peek"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=pranaygp.vscode-css-peek">CSS Peek</a></h4>
+
+<p>Adiciona a fun&#xE7;&#xE3;o Peek (Ctrl + Shift + F12) e Go To Definition (F12) para classes CSS dentro de HTML. Ou seja, voc&#xEA; consegue saber exatamente o que as classes do CSS est&#xE3;o fazendo com seu elemento HTML.</p>
+<p><img src="https://github.com/pranaygp/vscode-css-peek/raw/master/working.gif" alt="CSS Peek"><br>
+<img src="https://github.com/pranaygp/vscode-css-peek/raw/master/symbolProvider.gif" alt="Container"></p>
+<h4 class="mume-header" id="intellisense-for-css-class-names-in-htmlhttpsmarketplacevisualstudiocomitemdetailsitemnamezigndhtml-css-class-completion"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=Zignd.html-css-class-completion">IntelliSense for CSS class names in HTML</a></h4>
+
+<p>Implementa a fun&#xE7;&#xE3;o de autocompletar classes CSS em um arquivo HTML.</p>
+<p><img src="https://i.imgur.com/5crMfTj.gif" alt="Intellisense CSS in HTML"></p>
+<h4 class="mume-header" id="css-previewhttpsmarketplacevisualstudiocomitemdetailsitemnamesandorengholmcsspreview"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=sandorengholm.csspreview">CSS Preview</a></h4>
+
+<p>Adiciona uma pr&#xE9;via ao seu CSS.</p>
+<p><em>Comando:</em> Para ligar a pr&#xE9;via aperte <strong>Ctrl + Shift + P</strong></p>
+<p><img src="https://github.com/sandorengholm/csspreview/blob/master/images/csspreview.gif?raw=true" alt="CSS Preview"></p>
+<h4 class="mume-header" id="css-compressorhttpsmarketplacevisualstudiocomitemdetailsitemnamebestvowcss-compressor"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=bestvow.css-compressor">CSS Compressor</a></h4>
+
+<p>Compacta e Minifica seu c&#xF3;digo CSS.</p>
+<p><em>Comando:</em> Para formatar aperte <strong>Shift + Alt + F</strong></p>
+<p><img src="https://github.com/bestvow/css-compressor/blob/master/images/beautify.png?raw=true" alt="CSS Compressor"><br>
+<img src="https://github.com/bestvow/css-compressor/blob/master/images/compact.png?raw=true" alt="CSS Compressor"></p>
+<h4 class="mume-header" id="beautify-csssassscsslesshttpsmarketplacevisualstudiocomitemdetailsitemnamemichelemellusocode-beautifier"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=michelemelluso.code-beautifier">Beautify css/sass/scss/less</a></h4>
+
+<p>Deixa seu c&#xF3;digo CSS, SASS, SCSS e LESS mais bonito e visualmente f&#xE1;cil de entender.</p>
+<p><em>Comando:</em> Para formatar aperta <em>F1</em> e digite &quot;beautify.format&quot;</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-typescript">Extens&#xF5;es - TypeScript</h3>
+
+<h4 class="mume-header" id="typescript-herohttpsmarketplacevisualstudiocomitemdetailsitemnamerbbittypescript-hero"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=rbbit.typescript-hero">TypeScript Hero</a></h4>
+
+<p>Ferramentas adicionais para TypeScript, tais como organizar e ordenar imports.</p>
+<h4 class="mume-header" id="move-tshttpsmarketplacevisualstudiocomitemdetailsitemnamestringhammove-ts"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=stringham.move-ts">Move TS</a></h4>
+
+<p>Permite mover e renomear um arquivo TS e automaticamente arrumar todas as ocorrncias e refer&#xEA;ncias.</p>
+<p><img src="https://github.com/stringham/move-ts/raw/master/images/usage.gif" alt="Move TS"></p>
+<h4 class="mume-header" id="typescript-importhttpsmarketplacevisualstudiocomitemdetailsitemnamekevinmcgowantypescriptimport"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=kevinmcgowan.TypeScriptImport">TypeScript Import</a></h4>
+
+<p>Automatiza seus imports para as classes usadas em TypeScript.</p>
+<p><img src="http://i.imgur.com/XB4JPyy.gif" alt="TypeScript Import"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-javascript">Extens&#xF5;es - JavaScript</h3>
+
+<h4 class="mume-header" id="turbo-consolelog">Turbo Console.log()</h4>
+
+<p>Permite uma alternativa f&#xE1;cil e r&#xE1;pida ao comum Console.Log().</p>
+<p><em>Comandos:</em> Alt + Shift + u e Alt + Shift + C</p>
+<p><img src="https://i.imgur.com/Gmi4PIz.gif" alt="turbo console"></p>
+<h4 class="mume-header" id="javascript-es6-code-snippetshttpsmarketplacevisualstudiocomitemdetailsitemnamexabikosjavascriptsnippets"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=xabikos.JavaScriptSnippets">JavaScript (ES6) code snippets</a></h4>
+
+<p>Extens&#xE3;o contendo uma imensa variedade de Snippets de JavaScript.</p>
+<h4 class="mume-header" id="javascript-boosterhttpsmarketplacevisualstudiocomitemdetailsitemnamesburgvscode-javascript-booster"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=sburg.vscode-javascript-booster">JavaScript Booster</a></h4>
+
+<p>V&#xE1;rios comandos de refatora&#xE7;&#xE3;o e organiza&#xE7;&#xE3;o de c&#xF3;digo para aprimorar ainda mais nossa produtividade em JavaScript.</p>
+<p><img src="https://github.com/xsburg/vscode-javascript-booster/raw/master/resources/features.gif" alt="JS Booster"><br>
+<img src="https://github.com/xsburg/vscode-javascript-booster/raw/master/resources/smartSelection.gif" alt="JS Booster"></p>
+<h4 class="mume-header" id="eslinthttpsmarketplacevisualstudiocomitemdetailsitemnamedbaeumervscode-eslint"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=dbaeumer.vscode-eslint">ESLint</a></h4>
+
+<p>Tr&#xE1;s o poderoso ESLint para o VS Code.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-angular">Extens&#xF5;es - Angular</h3>
+
+<h4 class="mume-header" id="angular-8-snippetshttpsmarketplacevisualstudiocomitemdetailsitemnamemikaelangular-beastcode"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=Mikael.Angular-BeastCode">Angular 8 Snippets</a></h4>
+
+<p>Extens&#xE3;o com mais de 200 snippets para o Angular, sempre atualizando para a ultima vers&#xE3;o.</p>
+<p><img src="https://github.com/BeastCode/VSCode-Angular-TypeScript-Snippets/raw/master/images/ngRepeatSnippet.gif" alt="Angular Snippets"></p>
+<h4 class="mume-header" id="angular-extension-packhttpsmarketplacevisualstudiocomitemdetailsitemnamedoggy8088angular-extension-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=doggy8088.angular-extension-pack">Angular Extension Pack</a></h4>
+
+<p>Um super pacote com as extens&#xF5;es para Angular mais famosas e produtivas.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-react">Extens&#xF5;es - React</h3>
+
+<h4 class="mume-header" id="react-native-toolshttpsmarketplacevisualstudiocomitemdetailsitemnamevsmobilevscode-react-native"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=vsmobile.vscode-react-native">React Native Tools</a></h4>
+
+<p>Uma s&#xE9;rie de ferramentas para poder desenvolver em React Native, como por exemplo, a possibilidade de depurar seu c&#xF3;digo.</p>
+<p><img src="https://github.com/Microsoft/vscode-react-native/raw/master/images/add-debug-configuration.gif" alt="React Native Tools"></p>
+<h4 class="mume-header" id="es7-reactreduxgraphqlreact-native-snippetshttpsmarketplacevisualstudiocomitemdetailsitemnamedsznajderes7-react-js-snippets"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=dsznajder.es7-react-js-snippets">ES7 React/Redux/GraphQL/React-Native snippets</a></h4>
+
+<p>Os principais Snippets para React, Redux, GraphQl e React-Native.</p>
+<h4 class="mume-header" id="react-extension-packhttpsmarketplacevisualstudiocomitemdetailsitemnamejawandarajbirreact-vscode-extension-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=jawandarajbir.react-vscode-extension-pack">React Extension Pack</a></h4>
+
+<p>Pacote com v&#xE1;rias extens&#xF5;es muito &#xFA;teis para React.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-nodejs">Extens&#xF5;es - Node.JS</h3>
+
+<h4 class="mume-header" id="npmhttpsmarketplacevisualstudiocomitemdetailsitemnameeg2vscode-npm-script"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=eg2.vscode-npm-script">NPM</a></h4>
+
+<p>Suporte ao NPM (Node Package Manager ) pelo VS Code.</p>
+<p><img src="https://github.com/Microsoft/vscode-npm-scripts/raw/master/images/cmds.png" alt="NPM"></p>
+<h4 class="mume-header" id="npm-intellissensehttpsmarketplacevisualstudiocomitemdetailsitemnamechristian-kohlernpm-intellisense"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=christian-kohler.npm-intellisense">NPM Intellissense</a></h4>
+
+<p>Auto completar modulos do NPM.</p>
+<p><img src="https://github.com/ChristianKohler/NpmIntellisense/raw/master/images/auto_complete.gif" alt="NPM Intellisense"></p>
+<h4 class="mume-header" id="node-debughttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodenode-debug2"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.node-debug2">Node Debug</a></h4>
+
+<p>Ferramentas de depura&#xE7;&#xE3;o de c&#xF3;digo para Node.JS.</p>
+<h4 class="mume-header" id="node-exechttpsmarketplacevisualstudiocomitemdetailsitemnamemiramacvscode-exec-node"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=miramac.vscode-exec-node">Node Exec</a></h4>
+
+<p>Execute os seus arquivos Node.JS.</p>
+<h4 class="mume-header" id="node-snippetshttpsmarketplacevisualstudiocomitemdetailsitemnamechris-noringnode-snippets"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=chris-noring.node-snippets">Node Snippets</a></h4>
+
+<p>Principais Snippets para Node.JS e suas libs.</p>
+<p><img src="https://github.com/softchris/node-snippets/raw/master/images/node-snippets.gif" alt="Node Snippets"></p>
+<h4 class="mume-header" id="node-essentialshttpsmarketplacevisualstudiocomitemdetailsitemnameafractalnode-essentials"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=afractal.node-essentials">Node Essentials</a></h4>
+
+<p>Conjunto de ferramentas e extens&#xF5;es para se tornar produtivo ao m&#xE1;ximo no Node.JS</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-vue">Extens&#xF5;es - Vue</h3>
+
+<h4 class="mume-header" id="veturhttpsmarketplacevisualstudiocomitemdetailsitemnameoctrefvetur"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=octref.vetur">Vetur</a></h4>
+
+<p>A principal extens&#xE3;o para VUE, com mais de 12 milh&#xF5;es de Downloads.</p>
+<p>Possui ferramentas como Snippets, comandos Emmet, Linting, Formata&#xE7;&#xF5;es, Auto Completar, Depura&#xE7;&#xE3;o de C&#xF3;digo e muito mais...</p>
+<h4 class="mume-header" id="vuejs-extension-packhttpsmarketplacevisualstudiocomitemdetailsitemnamemubaidrvuejs-extension-pack"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mubaidr.vuejs-extension-pack">Vue.js Extension Pack</a></h4>
+
+<p>Pacote de extens&#xF5;es para Vue.js que reune v&#xE1;rias ferramentas bem &#xFA;teis para programa&#xE7;&#xE3;o em Vue.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-php">Extens&#xF5;es - PHP</h3>
+
+<h4 class="mume-header" id="php-intellisensehttpsmarketplacevisualstudiocomitemdetailsitemnamefelixfbeckerphp-intellisense"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=felixfbecker.php-intellisense">PHP IntelliSense</a></h4>
+
+<p>Habilita o uso do IntelliSense para o PHP.</p>
+<p><img src="https://github.com/felixfbecker/vscode-php-intellisense/raw/master/images/completion.gif" alt="PHP IntelliSense"><br>
+<img src="https://github.com/felixfbecker/vscode-php-intellisense/raw/master/images/signatureHelp.gif" alt="PHP IntelliSense"><br>
+<img src="https://github.com/felixfbecker/vscode-php-intellisense/raw/master/images/workspaceSymbol.gif" alt="PHP IntelliSense"><br>
+<img src="https://github.com/felixfbecker/vscode-php-intellisense/raw/master/images/references.png" alt="PHP IntelliSense"></p>
+<h4 class="mume-header" id="php-debughttpsmarketplacevisualstudiocomitemdetailsitemnamefelixfbeckerphp-debug"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=felixfbecker.php-debug">PHP Debug</a></h4>
+
+<p>Feramentas de Depura&#xE7;&#xE3;o de c&#xF3;digo para PHP.</p>
+<p><img src="https://github.com/felixfbecker/vscode-php-debug/raw/master/images/demo.gif" alt="PHP Debug"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-bash">Extens&#xF5;es - BASH</h3>
+
+<h4 class="mume-header" id="bash-debughttpsmarketplacevisualstudiocomitemdetailsitemnamerogalmicbash-debug"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=rogalmic.bash-debug">Bash Debug</a></h4>
+
+<p>Permite a depura&#xE7;&#xE3;o de c&#xF3;digos BASH.</p>
+<p><img src="https://raw.githubusercontent.com/rogalmic/vscode-bash-debug/gif/images/bash-debug-samp-launch-autoconfig.gif" alt="Bash Debug"></p>
+<h4 class="mume-header" id="bash-beautifyhttpsmarketplacevisualstudiocomitemdetailsitemnameshakram02bash-beautify"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=shakram02.bash-beautify">Bash Beautify</a></h4>
+
+<p>Uma extens&#xE3;o <em>Beautify</em> feita para BASH, tornarndo seus c&#xF3;digos muito mais bonitos e organizados.</p>
+<p><img src="https://github.com/shakram02/bash_beautify/raw/master/images/formatting.gif" alt="Bash Beautify"></p>
+<h4 class="mume-header" id="bash-idehttpsmarketplacevisualstudiocomitemdetailsitemnamemads-hartmannbash-ide-vscode"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=mads-hartmann.bash-ide-vscode">Bash IDE</a></h4>
+
+<p>Uma s&#xE9;rie de ferramentas para BASH, como ir para a declara&#xE7;&#xE3;o, procurar refer&#xEA;ncias, ativar o Code Outline, autocompletar e ferramentas de marca&#xE7;&#xE3;o e destaque.</p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-powershell">Extens&#xF5;es - PowerShell</h3>
+
+<h4 class="mume-header" id="powershellhttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodepowershell"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.PowerShell">PowerShell</a></h4>
+
+<p>Uma s&#xE9;rie das principais ferramentas para desenvolvimento em PowerShell, como destaques, snippets, IntelliSense e afins.</p>
+<h4 class="mume-header" id="powershell-pro-toolshttpsmarketplacevisualstudiocomitemdetailsitemnameironmansoftwarepowershellprotools"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ironmansoftware.powershellprotools">PowerShell Pro Tools</a></h4>
+
+<p>Outra extens&#xE3;o que &#xE9; um pacote para PowerShell. O principal diferencial &#xE9; a possibilidade de converter para C# e cria&#xE7;&#xE3;o de Windows Froms.</p>
+<p><img src="https://poshtools.com/wp-content/uploads/2018/12/win-form-designer.gif" alt="PowerShell Pro Tools"></p>
+<hr>
+<h3 class="mume-header" id="extens%C3%B5es-ruby">Extens&#xF5;es - Ruby</h3>
+
+<h4 class="mume-header" id="rubyhttpsmarketplacevisualstudiocomitemdetailsitemnamerebornixruby"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=rebornix.Ruby">Ruby</a></h4>
+
+<p>Extens&#xE3;o completa para desenvolvimento Ruby no VS Code, contendo:</p>
+<ol>
+<li>Depura&#xE7;&#xE3;o de c&#xF3;digo</li>
+<li>Lintings</li>
+<li>Formatadores</li>
+<li>Auto completar</li>
+<li>IntelliSense</li>
+</ol>
+<h4 class="mume-header" id="ruby-on-railshttpsmarketplacevisualstudiocomitemdetailsitemnamehridoyrails-snippets"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=hridoy.rails-snippets">Ruby on Rails</a></h4>
+
+<p>Pacote com mais de 10000 snipets e templates para Ruby on Rails.</p>
+<p><img src="https://github.com/hridoy/media/raw/master/rails-preview.gif" alt="Ruby on Rails"></p>
+<h3 class="mume-header" id="extens%C3%B5es-go">Extens&#xF5;es - Go</h3>
+
+<h4 class="mume-header" id="gohttpsmarketplacevisualstudiocomitemdetailsitemnamems-vscodego"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=ms-vscode.Go">Go</a></h4>
+
+<p>O principal (e oficial) pacote para programar em Go no VS Code. Possui fun&#xE7;&#xF5;es como IntelliSense, Code Navigation, edi&#xE7;&#xE3;o de c&#xF3;digo, diagn&#xF3;stico de c&#xF3;digo, depura&#xE7;&#xE3;o, teste e muito mais.</p>
+<h3 class="mume-header" id="extens%C3%B5es-haskell">Extens&#xF5;es - Haskell</h3>
+
+<h4 class="mume-header" id="haskellyhttpsmarketplacevisualstudiocomitemdetailsitemnameuclhaskelly"><a href="https://marketplace.visualstudio.com/itemdetails?itemName=UCL.haskelly">Haskelly</a></h4>
+
+<p>Ferramenta completa para suporte ao desenvolvimento Haskell, com destaques, snippets, hovers, auto completar e mais.</p>
+<p><img src="https://github.com/haskelly-dev/Haskelly/raw/master/resources/hover.gif" alt="Haskelly"><br>
+<img src="https://github.com/haskelly-dev/Haskelly/raw/master/resources/completion.gif" alt="Haskelly"></p>
+<hr>
+<h2 class="mume-header" id="produtividade-chegamos-ao-inifito">Produtividade &#x221E; - Chegamos ao inifito</h2>
+
+<p>Conseguimos! Chegamos ao infinito! Agora somos como deuses da produtividade!<br>
+S&#xF3; quero deixar aqui meu muito obrigado a todos voc&#xEA;s que acompanharam o livro/curso at&#xE9; aqui e de brinde deixar para voc&#xEA;s alguns extras bem legais, como configura&#xE7;&#xF5;es j&#xE1; prontas, materiais de estudo e dicas de personaliza&#xE7;&#xE3;o.</p>
+<hr>
+<h2 class="mume-header" id="produtividade-2-os-extras">Produtividade &#x221E;&#xB2; - Os Extras</h2>
+
+<p>Coloque sua produtividade (j&#xE1; infinita) ao quadrado com essas dicas excepcionais de configura&#xE7;&#xF5;es extras &#x1F603;.</p>
+<h3 class="mume-header" id="extra-materiais-de-ensino">Extra: Materiais de Ensino</h3>
+
+<ol>
+<li><a href="https://github.com/viatsko/awesome-vscode">Github <em>Awesome VS Code</em></a></li>
+<li><a href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks">Microsoft <em>Tips and Tricks</em></a></li>
+<li><a href="https://vscodecandothat.com/">VS Code Can Do That?</a></li>
+</ol>
+<p><em>Cr&#xE9;ditos aos devidos autores das postagens.</em></p>
+<h3 class="mume-header" id="extra-lista-de-diversos-outros-atalhos">Extra: Lista de Diversos Outros Atalhos</h3>
+
+<p>M&#xE9;todo 1: <a href="ttps://code.visualstudio.com/docs/getstarted/keybindings">Microsoft <em>Keybindings</em></a><br>
+M&#xE9;todo 2: Clique na engrenagem no canto inferior esquerdo e selecione <em>Keyboard Shortcuts</em>.</p>
+<p><em>Cr&#xE9;ditos aos devidos autores das postagens.</em></p>
+<h3 class="mume-header" id="extra-personaliza%C3%A7%C3%A3o">Extra: Personaliza&#xE7;&#xE3;o</h3>
+
+<p>Temas,Fontes e Icones s&#xE3;o como cores de camisa, cada um tem a sua prefer&#xEA;ncia e todas s&#xE3;o v&#xE1;lidas.<br>
+Tamb&#xE9;m deixamos aqui algumas configura&#xE7;&#xF5;es extras para a edi&#xE7;&#xE3;o via JSON &#x1F604;</p>
+<h4 class="mume-header" id="extra-dica-de-temas">Extra: Dica de Temas</h4>
+
+<p>Escolher um tema sem d&#xFA;vidas &#xE9; a mais dif&#xED;cil das customiza&#xE7;&#xF5;es, muitos preferem o estilo Dark, para evitar dor nos olhos, outros preferem cores claras, mas ambos passam mais de horas escolhendo as cores certas para cada estilo. Para evitar tanta dor de cabe&#xE7;a, escolhemos alguns links onde outros profissionais j&#xE1; tiveram essa &#xE1;rdua tarefa de passar horas escolhendo um tema, tudo com uma pr&#xE9;via feita para voc&#xEA; decidir ainda mais r&#xE1;pido qual seu tema favorito &#x1F603;</p>
+<ol>
+<li><a href="https://medium.com/@tkssharma/best-vs-code-themes-cb7ce05fb27a"><em>Best VS Code themes</em></a></li>
+<li><a href="https://scotch.io/bar-talk/5-hottest-vs-code-themes-to-use-in-2019"><em>6 Hottest VS Code Themes To Use in 2019</em></a></li>
+<li><a href="https://boostlog.io/@anshulc95/top-10-visual-studio-code-themes-5a9fad94e922f1008c7efb85"><em>Top 10 Visual Studio Code themes</em></a></li>
+<li><a href="http://orta.io/vscode-themes/"><em>VS Code Themes</em></a></li>
+</ol>
+<p><em>Cr&#xE9;ditos aos devidos autores das postagens.</em></p>
+<h4 class="mume-header" id="extra-dicas-de-fontes">Extra: Dicas de Fontes</h4>
+
+<p>Algumas dicas de fontes para programa&#xE7;&#xE3;o podem ser encontradas nos links abaixo, com pr&#xE9;vias das fontes em uso, para encontrar a sua ideal.</p>
+<ol>
+<li><a href="https://bit.ly/2OXOaFE"><em>Programming Fonts&#x200A;&#x2014;&#x200A;A List</em></a></li>
+<li><a href="https://bit.ly/2s14lHr"><em>11 Best Programming Fonts</em></a></li>
+<li><a href="https://app.programmingfonts.org/#font3270">ProgrammingFonts.org (Teste Suas Fontes)</a></li>
+</ol>
+<p><em>Cr&#xE9;ditos aos devidos autores das postagens.</em></p>
+<h4 class="mume-header" id="extra-dica-de-icones">Extra: Dica de Icones</h4>
+
+<p>Assim como fontes e temas, tamb&#xE9;m vamos deixar algumas sugest&#xF5;es para os icones, sendo elas:</p>
+<ol>
+<li>VSCode-Icons</li>
+<li>Material Icon Theme</li>
+<li>VSCode Great Icons</li>
+<li>Simple Icons</li>
+<li>Monokai Pro</li>
+</ol>
+<h4 class="mume-header" id="extra-configura%C3%A7%C3%B5es-produtividade-10000">Extra: Configura&#xE7;&#xF5;es Produtividade 10000%</h4>
+
+<pre data-role="codeBlock" data-info="{.json}" class="language- json"><code>&quot;editor.formatOnSave&quot;: true, // Formata o arquivo ao salvar
+&quot;editor.formatOnPaste&quot;: true, // Formata o arquivo ao colar algo
+&quot;javascript.format.enable&quot;: true, // Ativar a formata&#xE7;&#xE3;o em arquivo JS
+&quot;files.trimTrailingWhitespace&quot;: true, // Remove os espa&#xE7;os no final da linha
+&quot;editor.detectIndentation&quot;: true, // Detecta a identa&#xE7;&#xE3;o automaticamente
+&quot;editor.quickSuggestionsDelay&quot;: 0, // Delay para dar sugest&#xF5;es
+&quot;files.autoSave&quot;: &quot;afterDelay&quot;, // Habilitar autosave
+&quot;files.autoSaveDelay&quot;: 100, // Delay do autosave
+&quot;breadcrumbs.enabled&quot;: true, // Habilidar Breadcrumbs (auxiliar de navega&#xE7;&#xE3;o)
+&quot;workbench.editor.highlightModifiedTabs&quot;: true, // Habilita mostrar quais abas foram editadas e n&#xE3;o salvas ainda
+&quot;explorer.sortOrder&quot;: &quot;type&quot;, // Ordena os arquivos por tipo primeiro e depois por ordem alfab&#xE9;tica
+&quot;files.trimFinalNewlines&quot;: true, // Retira as linhas em branco no final do arquivo
+&quot;editor.mouseWheelZoom&quot;: true, // Habilita poder dar zoom com Ctrl + Scroll do mouse
+&quot;editor.renderWhitespace&quot;: &quot;boundary&quot;, // Mostra &apos;pontinhos&apos; no inicio da linha indicando espa&#xE7;os
+&quot;git.autofetch&quot;: true, // Faz um auto-fetch no git de tempo em tempo
+&quot;[python]&quot;: {  // Arruma a tabula&#xE7;&#xE3;o do python para ser de acordo com o pep8
+    &quot;editor.insertSpaces&quot;: true,
+    &quot;editor.tabSize&quot;: 4
+},
+&quot;emmet.includeLanguages&quot;: {  // Linguagens que v&#xE3;o ter uso do emmet
+  &quot;html&quot;: &quot;html&quot;,
+  &quot;erb&quot;: &quot;erb&quot;,
+  &quot;javascript&quot;: &quot;javascriptreact&quot;,
+  &quot;vue&quot;: &quot;html&quot;,
+  &quot;ejs&quot;: &quot;html&quot;
+},
+&quot;files.exclude&quot;: { // Arquivos para serem ignorados no Explorer do VS Code
+        &quot;**/.git&quot;: true,
+        &quot;**/.svn&quot;: true,
+        &quot;**/.hg&quot;: true,
+        &quot;**/CVS&quot;: true,
+        &quot;**/.DS_Store&quot;: true,
+        &quot;**/_site&quot;: true,
+        &quot;**/tmp&quot;: true,
+        &quot;**/*.pyc&quot;: true,
+        &quot;**/*.asset-cache&quot;: true,
+        &quot;**/*.cache&quot;: true,
+        &quot;**/*.jekyll-cache&quot;: true,
+        &quot;**/*.tweet-cache&quot;: true,
+        &quot;**/__pycache__&quot;: true,
+        &quot;**/.pytest_cache&quot;: true,
+        &quot;**/*.egg-info&quot;: true,
+        &quot;**/*.coverage&quot;: true,
+        &quot;**/celerybeat-schedule&quot;: true,
+        &quot;**/node_modules&quot;: true,
+        &quot;**/bower_components&quot;: true
+},
+&quot;files.eol&quot;: &quot;\n&quot;, // Declara o tipo de fim de linha, para ter um padr&#xE3;o nos arquivos
+&quot;[markdown]&quot;: { // Muita gente usa espa&#xE7;os duplos (&quot;  &quot;) no final da linha do MarkDown para indicar quebra de linha, ent&#xE3;o isso aqui ignora a op&#xE7;&#xE3;o de remover espa&#xE7;os em brancos no final das linhas do markdown
+    &quot;files.trimTrailingWhitespace&quot;: false
+},
+
+</code></pre><h4 class="mume-header" id="extra-configura%C3%A7%C3%B5es-customiza%C3%A7%C3%A3o-10000">Extra: Configura&#xE7;&#xF5;es Customiza&#xE7;&#xE3;o 10000%</h4>
+
+<pre data-role="codeBlock" data-info="{.json}" class="language- json"><code>&quot;workbench.colorCustomizations&quot;: { // Troque #FFFFFF pela sua cor favorita :)
+        &quot;activityBar.background&quot;: &quot;#FFFFFF&quot;, // Cor da AcitiviryBar
+        &quot;statusBar.background&quot;: &quot;#FFFFFF&quot;, // Cor da status bar
+        &quot;statusBar.foreground&quot;: &quot;#FFFFFF&quot;, // Cor do texto da status bar
+        &quot;editorLineNumber.foreground&quot;: &quot;#FFFFFF&quot;, // Cor do texto do numero indicador de linhas
+        &quot;editorOverviewRuler.errorForeground&quot;: &quot;#FFFFFF&quot;, // Cor do texto dos erros
+        &quot;titleBar.activeBackground&quot;: &quot;#FFFFFF&quot;, // Cor da barra de titulo
+        &quot;titleBar.activeForeground&quot;:&quot;#FFFFFF&quot;, // Cor do texto da barra de titulo
+    },
+&quot;editor.fontFamily&quot;: &quot;Fira Code&quot;, // Fonte a ser utilizada
+&quot;editor.fontLigatures&quot;: true, // Ativar ligadura tipogr&#xE1;fica (unir 2 ou mais s&#xED;mbolos em um s&#xF3;)
+&quot;editor.fontSize&quot;: 15, // Tamanho da fonte
+&quot;terminal.integrated.fontSize&quot;: 15, // Tamanho da fonte no terminal
+&quot;editor.minimap.enabled&quot;: false // Desabilita o minimapa lateral (&apos;preview&apos; do lado direito)
+
+</code></pre><hr>
+<h2 class="mume-header" id="b%C3%B4nus">B&#xF4;nus</h2>
+
+<h3 class="mume-header" id="b%C3%B4nus-cursos-gratuitos-de-vs-code">B&#xF4;nus: Cursos Gratuitos de VS Code</h3>
+
+<p>Al&#xE9;m deste livro, tamb&#xE9;m preparamos v&#xE1;rios cursos em v&#xED;deo para voc&#xEA;s!</p>
+<p>Os cursos s&#xE3;o totalmente gratuitos e abordam de forma super pr&#xE1;tica e did&#xE1;tica tudo o que apresentamos neste livro. Eles est&#xE3;o bem divididos, abordando apenas o necess&#xE1;rio para voc&#xEA;, como o que um desenvolvedor Front-End Web precisa saber, outro para o que um programador C# precisa conhecer, outro com o necess&#xE1;rio para o programador Java, outro para Python e assim vai...</p>
+<p>Tenho certeza que voc&#xEA; ir&#xE1; gostar desse incr&#xED;vel b&#xF4;nus!</p>
+<p>Para conferir todos os cursos acesse:</p>
+<ol>
+<li><a href="http://bit.ly/ByLearnVSCode">Nossos Cursos</a></li>
+<li><a href="http://bit.ly/ByLearn">Nosso site</a></li>
+</ol>
+<hr>
+<h4 class="mume-header" id="navegadores">Navegadores</h4>
+
+<p>Para ler o ebook online em seu navegador, voc&#xEA; precisa de um leitor de EPUB.</p>
+<p>No caso do Firefox e Google Chrome voc&#xEA; pode instalar a extens&#xE3;o <a href="https://www.epubread.com/en/">EpubRead</a>.</p>
+<p>J&#xE1; no Edge a leitura &#xE9; autom&#xE1;tica, n&#xE3;o necessitando de instalar nenhuma extens&#xE3;o.</p>
+<h4 class="mume-header" id="dispositivos-m%C3%B3veis">Dispositivos M&#xF3;veis</h4>
+
+<p>No caso dos dispositivos m&#xF3;veis, voc&#xEA; pode baixar um leitor de Epub na loja de aplicativos do seu celular, como por exemplo:</p>
+<p>Android: <a href="https://play.google.com/store/apps/details?id=com.faultexception.reader&amp;hl=pt_BR">Lithium</a>.</p>
+<p>IOS: <a href="https://itunes.apple.com/us/app/epub-reader-reader-for-epub-format/id972654880?mt=8">Epub Reader</a>.</p>
+<hr>
+<h2 class="mume-header" id="autores">Autores</h2>
+
+<h3 class="mume-header" id="felipe-cabrera-ribeiro-dos-santoshttpswwwfelipecabreracombr"><a href="https://www.felipecabrera.com.br">Felipe Cabrera Ribeiro dos Santos</a></h3>
+
+<h3 class="mume-header" id="bylearn-cursos-onlinehttpswwwbylearncombr"><a href="https://www.bylearn.com.br/">ByLearn Cursos Online</a></h3>
+
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

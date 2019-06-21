@@ -1,0 +1,6 @@
+Extensões Úteis:
+React Native Tools
+React Native Storybook
+ES7 React/Redux/GraphQL/React-Native snippets
+React Native - Full Pack
+(React Native Extension Pack)
