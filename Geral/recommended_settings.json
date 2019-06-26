@@ -1,0 +1,65 @@
+"editor.formatOnSave": true, // Formata o arquivo ao salvar
+"editor.formatOnPaste": true, // Formata o arquivo ao colar algo
+"javascript.format.enable": true, // Ativar a formatação em arquivo JS
+"files.trimTrailingWhitespace": true, // Remove os espaços no final da linha
+"editor.detectIndentation": true, // Detecta a identação automaticamente
+"editor.quickSuggestionsDelay": 0, // Delay para dar sugestões
+"files.autoSave": "afterDelay", // Habilitar autosave
+"files.autoSaveDelay": 100, // Delay do autosave
+"breadcrumbs.enabled": true, // Habilidar Breadcrumbs (auxiliar de navegação)
+"workbench.editor.highlightModifiedTabs": true, // Habilita mostrar quais abas foram editadas e não salvas ainda
+"explorer.sortOrder": "type", // Ordena os arquivos por tipo primeiro e depois por ordem alfabética
+"files.trimFinalNewlines": true, // Retira as linhas em branco no final do arquivo
+"editor.mouseWheelZoom": true, // Habilita poder dar zoom com Ctrl + Scroll do mouse
+"editor.renderWhitespace": "boundary", // Mostra 'pontinhos' no inicio da linha indicando espaços
+"git.autofetch": true, // Faz um auto-fetch no git de tempo em tempo
+"[python]": { // Arruma a tabulação do python para ser de acordo com o pep8
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+},
+"emmet.includeLanguages": { // Linguagens que vão ter uso do emmet
+    "html": "html",
+    "erb": "erb",
+    "javascript": "javascriptreact",
+    "vue": "html",
+    "ejs": "html"
+},
+"files.exclude": { // Arquivos para serem ignorados no Explorer do VS Code
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/_site": true,
+    "**/tmp": true,
+    "**/*.pyc": true,
+    "**/*.asset-cache": true,
+    "**/*.cache": true,
+    "**/*.jekyll-cache": true,
+    "**/*.tweet-cache": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true,
+    "**/*.coverage": true,
+    "**/celerybeat-schedule": true,
+    "**/node_modules": true,
+    "**/bower_components": true
+},
+"files.eol": "\n", // Declara o tipo de fim de linha, para ter um padrão nos arquivos
+"[markdown]": { // Muita gente usa espaços duplos ("  ") no final da linha do MarkDown para indicar quebra de linha, então isso aqui ignora a opção de remover espaços em brancos no final das linhas do markdown
+    "files.trimTrailingWhitespace": false
+},
+"workbench.colorCustomizations": { // Troque #FFFFFF pela sua cor favorita :)
+    "activityBar.background": "#FFFFFF", // Cor da AcitiviryBar
+    "statusBar.background": "#FFFFFF", // Cor da status bar
+    "statusBar.foreground": "#FFFFFF", // Cor do texto da status bar
+    "editorLineNumber.foreground": "#FFFFFF", // Cor do texto do numero indicador de linhas
+    "editorOverviewRuler.errorForeground": "#FFFFFF", // Cor do texto dos erros
+    "titleBar.activeBackground": "#FFFFFF", // Cor da barra de titulo
+    "titleBar.activeForeground": "#FFFFFF", // Cor do texto da barra de titulo
+},
+"editor.fontFamily": "Fira Code", // Fonte a ser utilizada
+"editor.fontLigatures": true, // Ativar ligadura tipográfica (unir 2 ou mais símbolos em um só)
+"editor.fontSize": 15, // Tamanho da fonte
+"terminal.integrated.fontSize": 15, // Tamanho da fonte no terminal
+"editor.minimap.enabled": false // Desabilita o minimapa lateral ('preview' do lado direito)

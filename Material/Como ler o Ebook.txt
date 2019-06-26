@@ -1,0 +1,49 @@
+Fala ByLearner, beleza?
+
+Vamos aprender como ler nosso livrinho de forma correta? hehehehehehehe
+
+Passo 1 - Compre na amazon: https://www.amazon.com.br/dp/B07QN1N57H e https://www.amazon.com/dp/1093667893
+Passo 2 - Seja Feliz...
+
+BRINCADEIRA... O e-book aqui é GRATUITO!
+
+----------------------------------------
+
+[VERSÃO RECOMENDADA]
+
+Originalmente, a ideia deste livro era ser um repositório Awesome no GitHub, portanto, o mesmo teria gifs e usaria benefícios do formato MarkDown.
+Portanto, recomendamos que você leia O REPOSITÓRIO NO GITHUB!
+
+Github:
+	Para ler direto no github, você pode acessar nosso repositório oficial:
+		https://github.com/bylearn/VS-Code-Produtividade-Infinita
+
+----------------------------------------
+
+[EPUB]
+
+Quando pensamos em criar o livro, devido as limitações do PDF para redimensionamento de letras e apresentação de GIFs, este repositório foi convertido para EPUB.
+Porém, o EPUB dependendo da resolução e do leitor, as midias externas (como imagens e gifs) podem ficar mal formatadas ou não aparecer.
+Sendo assim, recomendamos que você mesmo assim leia o nosso repositório no github!
+
+
+Windows, Mac e Linux:
+	Para ler o ebook no seu desktop você irá precisar de um leitor de EPUB, como é o caso do Calibre-Ebook.
+	Download: http://calibre-ebook.com/dowload
+	Documentação (caso tenha curiosidade em saber como ele funciona): https://manual.calibre-ebook.com/pt_BR/viewer.html
+
+Navegadores:
+	Para ler o ebook EPUB online em seu navegador, você precisa de um leitor de EPUB.
+	No caso do Firefox e Google Chrome você pode instalar a seguinte extensão: https://www.epubread.com/en/
+	Já no Edge a leitura é automática, não necessitando de instalar nenhuma extensão.
+
+----------------------------------------
+
+[EBOOK CONVENCIONAL]
+	
+Não tendo como postar EPUB como Ebook, muito menos como livro físico (aliás, os gifs não pegariam), criamos uma outra versão.
+Essa nova versão possui uma formatação melhor para livros, porém, não há gifs
+	
+PDF:
+	Geramos também uma versão apenas PDF, ela é mais simples e sem gifs, mas caso você prefira isso ao invez de instalar o leitor de epub, tudo bem :).
+	Para isso basta abrir o PDF incluso no zip!

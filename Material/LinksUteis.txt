@@ -1,0 +1,24 @@
+Tutoriais:
+https://github.com/viatsko/awesome-vscode
+https://code.visualstudio.com/docs/getstarted/tips-and-tricks
+https://vscodecandothat.com/
+
+Atalhos:
+https://code.visualstudio.com/docs/getstarted/keybindings
+
+Temas:
+https://scotch.io/bar-talk/5-hottest-vs-code-themes-to-use-in-2019
+https://medium.com/@tkssharma/best-vs-code-themes-cb7ce05fb27a
+https://boostlog.io/@anshulc95/top-10-visual-studio-code-themes-5a9fad94e922f1008c7efb85
+http://orta.io/vscode-themes/
+
+Fontes:
+https://medium.com/@caulfieldOwen/programming-fonts-a-visual-guide-567fc210d2c6
+https://itnext.io/11-best-programming-fonts-724283a9ed57
+https://app.programmingfonts.org/#font3270
+
+Snippets:
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+VS Codium (VS Code sem telemetria):
+https://github.com/VSCodium/vscodium
